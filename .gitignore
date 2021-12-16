@@ -2,4 +2,5 @@
 *.out
 *.aux
 *.synctex.gz
+*.toc
 *.xmpi
