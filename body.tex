@@ -47,7 +47,7 @@
 \usepackage[notrig,italicdiff]{physics}
 \mleftright
 
-\usepackage[cal=boondoxo,frak=pxtx,bb=ams]{mathalpha}
+\usepackage[scr=boondoxo,frak=pxtx,bb=mth]{mathalfa}
 \DeclareMathAlphabet{\mathnormal}{T1}{pplx}{m}{it}
 \DeclareMathAlphabet{\mathrm}{T1}{pplx}{m}{n}
 \DeclareMathAlphabet{\mathit}{T1}{pplx}{m}{it}
@@ -56,6 +56,13 @@
 \DeclareMathAlphabet{\mathbsf}{T1}{kurier}{b}{n}
 \DeclareMathAlphabet{\mathbold}{T1}{pplx}{b}{it}
 \DeclareMathAlphabet{\mathbf}{T1}{pplx}{b}{n}
+\DeclareMathAlphabet{\mathscr}{U}{BOONDOX-calo}{m}{n}
+\DeclareMathAlphabet{\mathbscr}{U}{BOONDOX-calo}{b}{n}
+%\DeclareMathAlphabet{\mathcal}{OT1}{eusm10}{m}{n}
+%\DeclareMathAlphabet{\mathbcal}{OT1}{eusm10}{b}{n}
+\DeclareMathAlphabet{\mathfrak}{OT1}{tx-frak}{m}{n}
+\DeclareMathAlphabet{\mathbfrak}{OT1}{tx-frak}{b}{n}
+\DeclareMathAlphabet{\mathbb}{U}{dsss}{m}{n}
 \DeclareSymbolFont{operators}{T1}{uop}{m}{n}
 
 \DeclareSymbolFont{numbers}{T1}{pplx}{m}{n}
@@ -91,7 +98,8 @@
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 
-\setmainfont{Palatino}
+\usepackage[osf]{newpxtext}
+\usepackage{classico}
 \setmainjfont{FOT-MatissePro-DB}[
 	AltFont={
 		{
@@ -126,7 +134,6 @@
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
 	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
 ]
-\setsansfont{Optima}
 \setsansjfont{FOT-RodinNTLGPro-DB}[
 	BoldFeatures={Font=FOT-RodinNTLGPro-EB,},
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
@@ -140,6 +147,18 @@
 	Ligatures=TeXReset,
 	Scale=0.89,
 ]
+
+%%%%%%%%%%%%自作マクロ
+\newcommand{\vc}{\mathbold}
+\newcommand{\hmeqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\hmeqq}{\stackrel{\mathrm{?}}{=}}
+\newcommand{\centeralign}[1]{\rule{0pt}{0pt}\hfill#1\hfill\rule{0pt}{0pt}}
+\NewDocumentCommand\hmu{s m}{\IfBooleanF{#1}{\,}\ifmmode\mathrm{#2}\else\(\mathrm{#2}\)\fi}
+\newcommand{\hmemph}[1]{\textbf{#1}}
+\newcommand{\hme}[1]{\times10^{#1}}
+\newcommand{\hmfnc}[1]{\(\mathrm{#1}\)}
+\newcommand{\hmfconv}{F_\mathrm{conv}}
+\NewDocumentCommand\etal{s}{\textit{et al.}\IfBooleanF{#1}{\ }}
 
 \title{地球型惑星における南北熱輸送\\その太陽定数への依存性}
 \author{人見祥磨}
