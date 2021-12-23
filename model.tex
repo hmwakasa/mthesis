@@ -3,21 +3,22 @@
 % +++
 \documentclass[body]{subfiles}
 \begin{document}
-\section{モデルの概要}
+\chapter{モデルの概要}
+
+\section{系の設定と基礎方程式}
 DCPAM5 を利用している。
-\subsection{基礎方程式}
-\subsubsection{連続の式}
-\begin{equation}
-	\pdv{\pi}{t}+\vc{v}_H\vdot\grad_\sigma\pi=-D-\pdv{\dot\sigma}{\sigma}.
-\end{equation}
-\subsubsection{静水圧の式}
-\begin{equation}
-	\pdv{\Phi}{\sigma}=-\frac{RT_v}{\sigma}.
-\end{equation}
-\subsubsection{運動方程式}
-\begin{equation}
-	\pdv{\zeta}=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V_A}{\lambda}-\pdv{U_A}{\mu})+\mathscr{D}[\zeta].
-\end{equation}
+
+連続の式、静水圧の式、運動方程式は以下の通りである。
+\begin{gather}
+	\pdv{\pi}{t}+\vc{v}_H\vdot\grad_\sigma\pi=-D-\pdv{\dot\sigma}{\sigma},\\
+	\pdv{\Phi}{\sigma}=-\frac{RT_v}{\sigma},\\
+	\pdv{\zeta}=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V_A}{\lambda}-\pdv{U_A}{\mu})+\mathscr{D}[\zeta].\\
+\end{gather}
+
+物理過程
+
+\section{実験設定}
+
 
 \end{document}
 

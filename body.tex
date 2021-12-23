@@ -1,7 +1,7 @@
 % +++
 % latex="texfot lualatex-dev"
 % +++
-\documentclass[open_bracket_pos=nibu_tentsuki,hanging_punctuation,]{jlreq}
+\documentclass[open_bracket_pos=nibu_tentsuki,hanging_punctuation,report]{jlreq}
 
 \usepackage{subfiles}
 
@@ -148,6 +148,8 @@
 	Scale=0.89,
 ]
 
+\jlreqsetup{caption_font=\normalsize\normalfont}
+
 %%%%%%%%%%%%自作マクロ
 \newcommand{\vc}{\mathbold}
 \newcommand{\hmeqdef}{\stackrel{\mathrm{def}}{=}}
@@ -176,8 +178,6 @@
 
 \tableofcontents
 
-\pagebreak
-
 \subfile{intro}
 
 \subfile{model}
@@ -189,5 +189,9 @@
 \subfile{thanks}
 
 \subfile{ref}
+
+\listoftables
+
+\listoffigures
 
 \end{document}
