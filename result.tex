@@ -14,6 +14,18 @@
 
 \section{南北熱輸送の太陽定数依存性}
 
+\(\bullet'=\bullet-\bar\bullet\)、\(\bullet^*=\bullet-[\bullet]\)、
+\(\bar\bullet\) は時間平均、\([\bullet]\) は東西平均
+
+\begin{align}
+	[\overline{xv}]&=[\overline{xv}]-[\bar x\bar v]+[\bar x][\bar v]+[\bar x\bar v]-[\bar x][\bar v]\\
+	&=[\overline{xv}-\bar x\bar v]+[\bar x][\bar v]+[\bar x\bar v]-[\bar x][\bar v]\\
+	&=[\bar x\bar v-\bar x\bar\bar v-\bar\bar x\bar v+\bar\bar x\bar\bar v]+[\bar x][\bar v]
+		+([\bar x\bar v]-[\bar x][[\bar v]]-[[\bar x]][\bar v]+[[\bar x]][[\bar v]])\\
+	&=[\overline{(x-\bar x)(v-\bar v)}]+[\bar x][\bar v]+[\overline{(x-[x])}\overline{(v-[v])}]\\
+	&=[\overline{x'v'}]+[\bar x][\bar v]+[\bar x^*\bar v^*]
+\end{align}
+
 \begin{figure}[t]
 	\includegraphics[height=\textwidth,angle=-90]{S1366SurfTemp,time=10950.pdf}
 	\caption{\(S=1366\hmu{W/m^2}\) 30 年目の地表面温度}
@@ -32,7 +44,6 @@
 \end{figure}
 \begin{figure}[t]
 	\includegraphics[height=\textwidth,angle=-90]{S2000Temp,time=1095.pdf}
-	\caption{\(S=2000\hmu{W/m^2}\) 3 年目の子午面温度分布
-	}
+	\caption{\(S=2000\hmu{W/m^2}\) 3 年目の子午面温度分布}
 \end{figure}
 \end{document}

@@ -1,0 +1,66 @@
+open sftp://hmwakasa:@dennou-h.gfd-dennou.org
+cd /GFD_Dennou_Work12/hmwakasa
+
+set xfer:clobber on
+
+mget *-overplot.pdf
+!ls -t *-overplot.pdf | head -n2 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n2 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+
+cd S1366
+lcd S1366
+mget *.png
+!ls -t *0.png | head -n1 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _50y/
+mget *.pdf
+!ls -t *0.pdf | head -n6 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n6 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1500
+lcd S1500
+mget *.png
+!ls -t *0.png | head -n1 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _10y/
+mget *.pdf
+!ls -t *0.pdf | head -n6 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n6 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1600
+lcd S1600
+mget *.png
+!ls -t *0.png | head -n1 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _10y/
+mget *.pdf
+!ls -t *0.pdf | head -n6 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n6 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1800
+lcd S1800
+mget *.png
+!ls -t *0.png | head -n1 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _20y/
+mget *.pdf
+!ls -t *0.pdf | head -n6 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n6 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S2000
+lcd S2000
+mget *.png
+!ls -t *0.png | head -n1 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _30y/
+mget *.pdf
+!ls -t *0.pdf | head -n6 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n6 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+
+exit

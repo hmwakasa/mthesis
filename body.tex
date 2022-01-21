@@ -7,6 +7,7 @@
 
 \usepackage{luatexja,luatexja-adjust}
 \usepackage[no-math,match]{luatexja-fontspec}
+\ltjsetparameter{jacharrange={-2,-3,-8}}
 
 %\usepackage[x-1a]{pdfx}
 
@@ -35,12 +36,9 @@
 \newlist{enu}{enumerate}{5}
 \setlist[enu]{label*=\arabic*.}
 
-\ltjsetparameter{jacharrange={-2,-3,-8}}
-\usepackage[no-math,match,deluxe,fontspec]{luatexja-preset}
-
 \usepackage{epmaketitle} %https://github.com/matryo-sika/epmaketitle
 
-% \usepackage[osf]{newpxtext}\usepackage{classico}
+\usepackage[osf]{newpxtext}\usepackage{classico}
 \usepackage[nowidering]{yhmath}
 \usepackage{newpxmath,amsmath,mathtools,mleftright}
 \usepackage[T1]{fontenc}
@@ -98,8 +96,6 @@
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 
-\usepackage[osf]{newpxtext}
-\usepackage{classico}
 \setmainjfont{FOT-MatissePro-DB}[
 	AltFont={
 		{
