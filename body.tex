@@ -1,7 +1,7 @@
 % +++
 % latex="texfot lualatex-dev"
 % +++
-\documentclass[open_bracket_pos=nibu_tentsuki,hanging_punctuation,report]{jlreq}
+\documentclass[open_bracket_pos=nibu_tentsuki,hanging_punctuation,report,tbtags]{jlreq}
 
 \usepackage{subfiles}
 
@@ -27,8 +27,12 @@
 \mhchemoptions{textfontcommand=\sffamily,mathfontcommand=\mathsf}
 \newcommand*\cec[1]{\cesplit{{\,\ }{\0}}{#1}}
 
-\usepackage{tabularray}
-\SetTblrDefault{rowsep=0pt}
+\usepackage{array,booktabs,tabularray}
+\SetTblrDefault{rowsep=2pt}
+\UseTblrLibrary{booktabs}
+
+\usepackage{multicol}
+\usepackage{subcaption}
 
 \usepackage[loadonly,]{enumitem}
 \newlist{desc}{description}{5}
@@ -44,6 +48,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[notrig,italicdiff]{physics}
 \mleftright
+
+\ltjenableadjust[lineend=extended,priority=true,profile=true,linestep=true]
 
 \usepackage[scr=boondoxo,frak=pxtx,bb=mth]{mathalfa}
 \DeclareMathAlphabet{\mathnormal}{T1}{pplx}{m}{it}
