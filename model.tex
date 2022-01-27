@@ -8,9 +8,7 @@
 \section{系の設定と基礎方程式}
 3 次元球殻上の3 次元球殻上の3 次元球殻上の大気大循環モデル DCPAM5 を用いて数値実験を行った。
 
-連続の式 \eqref{連続}、静水圧の式 \eqref{静水圧}、運動方程式 \eqref{運動1}, \eqref{運動2}、
-熱力学の式 \eqref{熱力学}、水蒸気 \eqref{水蒸気} の式は以下の通りである。各記号の意味は表
-\ref{記号表} に記した。
+DCPAM の力学過程で用いられている基礎方程式は以下の通りである。
 \begin{gather}
 	\pdv{\pi}{t}+\vb*{v}_H\cdot\nabla_\sigma\pi=-D-\pdv{\dot \sigma}{\sigma},\label{連続}\\
 	\pdv{\Phi}{\sigma}=-\frac{RT_v}{\sigma},\label{静水圧}\\
@@ -25,6 +23,10 @@
 	\pdv{q}{t}=-\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U_q}{\lambda}+\pdv{V_q}{\mu})
 		+qD-\dot\sigma\pdv{q}{\sigma}+S_q+\mathcal{D}[q].\label{水蒸気}
 \end{gather}
+ここで、それぞれ、連続の式 \eqref{連続}、静水圧の式 \eqref{静水圧}、
+運動方程式 \eqref{運動1}, \eqref{運動2}、
+熱力学の式 \eqref{熱力学}、水蒸気の式 \eqref{水蒸気} の式である。
+各記号の意味は \ref{記号表} に記した。
 \begin{table}[t]
 	\centering
 	\caption{記号表}\label{記号表}
@@ -35,12 +37,16 @@
 			\begin{tabbing}
 				\hspace*{3\zw}\=\kill
 				\(\varphi,\lambda\)\>緯度経度\\
-				\(\sigma:=p/p_s\)\quad\(\sigma\) 座標高度\\
+				\(\sigma\coloneqq p/p_s\)\quad\(\sigma\) 座標高度\\
 				\(t\)\>時間\\
-				\(\pi:=\ln[p_s]\)\\
+				\(\pi\coloneqq\ln[p_s]\)\\
 				\(T\)\>気温\\
 				\(q\)\>比湿\\
 				\(a\)\>惑星半径\\
+				\(\Phi\coloneqq gz\)\quad ジオポテンシャル高度\\
+				\(\displaystyle\sigma\coloneqq\pdv{\sigma}{t}\equiv
+					\pdv{\sigma}{t}+\frac{u}{a\cos\phi}\pdv{\sigma}{\lambda}
+					+\frac{v}{a}\pdv{\sigma}{\phi}+\pdv{\sigma}{\sigma}\)\\
 			\end{tabbing}
 		\end{minipage}
 		\hfill
@@ -48,10 +54,10 @@
 			\hfill
 			\begin{tabbing}
 				\hspace*{3\zw}\=\kill
-				\(\displaystyle\zeta:=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V}{\lambda}-\pdv{U}{\mu})\)\quad 渦度\\
-				\(\displaystyle\zeta:=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U}{\lambda}+\pdv{V}{\mu})\)\quad 発散\\
+				\(\displaystyle\zeta\coloneqq\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V}{\lambda}-\pdv{U}{\mu})\)\quad 渦度\\
+				\(\displaystyle\zeta\coloneqq\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U}{\lambda}+\pdv{V}{\mu})\)\quad 発散\\
 				\(u,v\)\>東西・南北風速\\
-				\((U,V):=(u\cos\varphi,v\cos\varphi)\)\\
+				\((U,V)\coloneqq(u\cos\varphi,v\cos\varphi)\)\\
 				\(\mathcal{D}\)\>水平拡散\\
 				\(\mathcal{D}'[\vb*{v}]\)\>摩擦熱
 			\end{tabbing}
@@ -73,15 +79,25 @@
 Chou and Kouvaris (1991) の方法に基づいて計算する。
 雲の消散係数、単一散乱アルベド、非対称因子は Chou \etal (2001) の値を使用する。
 
-サブグリッドスケールの混合・凝縮に関して、乱流混合は \textbf{???} を使用する。
-また、Manabe \etal (1965) の乾燥対流調節スキームを用い、
+サブグリッドスケールの混合・凝縮に関して、乱流混合は Mellor and Yamada level 2.5
+(Mellor and Yamada, 1982) を使用する。また、Manabe \etal (1965) の乾燥対流調節スキームを用い、
 積雲対流調節に関しては Relaxed Arakawa--Schubert (Moorthi and Suarez, 1992) を
 使用する。
 
-雲に関しては、移流・乱流混合・凝結による生成、定数時定数による消滅を考慮して雲水
-混合比を予報する。
+雲に関しては、移流・乱流混合・凝結による生成、時定数による消滅を考慮して雲水
+混合比を予報する。惑星表面はスラブオーシャンであるとして、表面温度を計算する。
 
 \section{実験設定}
+
+実験で用いたモデルパラメータの値を、表 \ref{モデルパラメータ} に示す。
+本研究で行う計算の水平分解能は、三角形切断の T42 に対応する、\(128\times64\)
+であり、鉛直座標には \(\sigma\) 座標系を用い、その層数は 26 である。
+
+表 \ref{実験リスト} に示す太陽定数で実験を行った。以後、各実験で与えた太陽定数
+の値に、S を前置したものを実験名とする。
+
+初期状態は、どの太陽定数においても、静止・等温 (\(280\hmu{K}\))・比湿は 0 で一様
+とした。
 
 \begin{table}[t]
 	\centering
@@ -107,25 +123,21 @@ Chou and Kouvaris (1991) の方法に基づいて計算する。
 
 \begin{table}[t]
 	\centering
-	\caption{実験を行った太陽定数の値}\label{太陽定数}
+	\caption{実験リスト}\label{実験リスト}
 	\begin{tblr}{lccccc}
 		\toprule
-		太陽定数 \(S\ [\hmu*{W/m^2}]\)&1300&1500&1600&1800&2000\\
-		積分期間 \([\text{年}]\)&50&20&20&20&30\\
-		計算結果を示す年度 \([\text{年度}]\)&41&11&11&11&21\\
+		実験名&太陽定数 \(S\ [\hmu*{W/m^2}]\)&雲時定数 \([\hmu*{s}]\)&
+			積分期間 \([\text{年}]\)&計算結果を示す年度 \([\text{年度}]\)\\
+		\midrule
+		S1366&1366&13500&50&41\\
+		S1500&1500&13500&20&11\\
+		S1600&1600&13500&20&11\\
+		S1800&1800&13500&20&11\\
+		S2000&2000&13500&30&21\\
 		\bottomrule
 	\end{tblr}
 \end{table}
 
-実験で用いたモデルパラメータの値を、表 \ref{モデルパラメータ} に示す。
-本研究で行う計算の水平分解能は、三角形切断の T42 に対応する、\(128\times64\)
-であり、鉛直座標には \(\sigma\) 座標系を用い、その層数は 26 である。
-
-表 \ref{太陽定数} に示す太陽定数で実験を行った。以後、各実験で与えた太陽定数
-の値に、S を前置したものを実験名とする。
-
-初期状態は、どの太陽定数においても、静止・等温 (\(280\hmu{K}\))・比湿は 0 で一様
-とした。
 
 \end{document}
 
