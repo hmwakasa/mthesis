@@ -1,5 +1,6 @@
 % +++
 % latex="texfot lualatex-dev"
+% bibtex="biber"
 % +++
 \documentclass[open_bracket_pos=nibu_tentsuki,hanging_punctuation,report,tbtags]{jlreq}
 
@@ -41,6 +42,10 @@
 \setlist[enu]{label*=\arabic*.}
 
 \usepackage{epmaketitle} %https://github.com/matryo-sika/epmaketitle
+
+\usepackage{biblatex}
+\addbibresource{ref.bib}
+\nocite{*}
 
 \usepackage[osf]{newpxtext}\usepackage{classico}
 \usepackage[nowidering]{yhmath}
@@ -180,6 +185,10 @@
 
 \tableofcontents
 
+\listoftables
+
+\listoffigures
+
 \subfile{intro}
 
 \subfile{model}
@@ -190,10 +199,7 @@
 
 \subfile{thanks}
 
-\subfile{ref}
-
-\listoftables
-
-\listoffigures
+\chapter*{参考文献}
+\printbibliography
 
 \end{document}

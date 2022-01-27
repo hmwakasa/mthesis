@@ -30,7 +30,7 @@ DCPAM の力学過程で用いられている基礎方程式は以下の通り�
 \begin{table}[t]
 	\centering
 	\caption{記号表}\label{記号表}
-	\begin{minipage}{.8\textwidth}
+	\begin{minipage}{\textwidth}
 		\rule[0pt]{\textwidth}{\heavyrulewidth}\\
 		\begin{minipage}{.5\textwidth}
 			\hfill
@@ -43,10 +43,21 @@ DCPAM の力学過程で用いられている基礎方程式は以下の通り�
 				\(T\)\>気温\\
 				\(q\)\>比湿\\
 				\(a\)\>惑星半径\\
+				\(f\)\>コリオリパラメータ\\
+				\(\displaystyle\zeta\coloneqq\frac{1}{a}
+					\qty(\frac{1}{1-\mu^2}\pdv{V}{\lambda}-\pdv{U}{\mu})\)\quad 渦度\\
+				\(\displaystyle\zeta\coloneqq\frac{1}{a}
+					\qty(\frac{1}{1-\mu^2}\pdv{U}{\lambda}+\pdv{V}{\mu})\)\quad 発散\\
+				\(u,v\)\>東西・南北風速\\
+				\((U,V)\coloneqq(u\cos\varphi,v\cos\varphi)\)\\
 				\(\Phi\coloneqq gz\)\quad ジオポテンシャル高度\\
 				\(\displaystyle\sigma\coloneqq\pdv{\sigma}{t}\equiv
 					\pdv{\sigma}{t}+\frac{u}{a\cos\phi}\pdv{\sigma}{\lambda}
 					+\frac{v}{a}\pdv{\sigma}{\phi}+\pdv{\sigma}{\sigma}\)\\
+				\(\bar T\)\>基準温位\\
+				\(T'\coloneqq T-\bar T\)\\
+				\(T_v\coloneqq T(1+(\epsilon_v^{-1}-1)q)\)\\
+				\(T'_v\coloneqq T_v-\bar T\)
 			\end{tabbing}
 		\end{minipage}
 		\hfill
@@ -54,12 +65,28 @@ DCPAM の力学過程で用いられている基礎方程式は以下の通り�
 			\hfill
 			\begin{tabbing}
 				\hspace*{3\zw}\=\kill
-				\(\displaystyle\zeta\coloneqq\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V}{\lambda}-\pdv{U}{\mu})\)\quad 渦度\\
-				\(\displaystyle\zeta\coloneqq\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U}{\lambda}+\pdv{V}{\mu})\)\quad 発散\\
-				\(u,v\)\>東西・南北風速\\
-				\((U,V)\coloneqq(u\cos\varphi,v\cos\varphi)\)\\
-				\(\mathcal{D}\)\>水平拡散\\
-				\(\mathcal{D}'[\vb*{v}]\)\>摩擦熱
+				\(\displaystyle U_A\coloneqq(\zeta+f)V-\dot\sigma\pdv{U}{\sigma}
+					-\frac{RT'_v}{a}\pdv{\pi}{\lambda}+\mathcal{F}_\lambda\cos\phi\)\\
+				\(\displaystyle V_A\coloneqq-(\zeta+f)U-\dot\sigma\pdv{V}{\sigma}
+					\frac{RT'_v}{a}(1-\mu^2)\pdv{\pi}{\mu}+\mathcal{F}_\phi\cos\phi\)\\
+				\(\displaystyle\vb*{v}_H\vdot\nabla_\sigma\pi\coloneqq
+					\frac{U}{a(1-\mu^2)}\pdv{\theta}{\lambda}+\frac{V}{a}\pdv{\pi}{\lambda}\)\\
+				\(\displaystyle\nabla_\sigma^2\coloneqq\frac{1}{a^2(1-\mu^2)}\pdv[2]{}{\lambda}
+					+\frac{1}{a^2}\pdv{}{\mu}\qty[(1-\mu^2)\pdv{}{\mu}]\)\\
+				\(\displaystyle KE\coloneqq\frac{U^2+V^2}{2(1-\mu^2)}\)\\
+				\(\mathcal{D}[\zeta]\)\>渦度の水平発散とスポンジ層での散逸\\
+				\(\mathcal{D}[D]\)\>発散の水平発散とスポンジ層での散逸\\
+				\(\mathcal{D}[T]\)\>熱の水平拡散\\
+				\(\mathcal{D}[q]\)\>水蒸気の水平拡散\\
+				\(\mathcal{D}'[\vb*{v}]\)\>摩擦熱\\
+				\(\mathcal{F}_\lambda\)\>小規模運動過程（経度方向）\\
+				\(\mathcal{F}_\phi\)\>小規模運動過程（緯度方向）\\
+				\(Q\)\>加熱・温度変化\\
+				\(S_q\)\>水蒸気源\\
+				\(R\)\>乾燥空気の気体定数\\
+				\(c_{pn}\)\>乾燥空気の定圧比熱\\
+				\(\kappa\coloneqq R/c_{pn}\)\\
+				\(\epsilon_v\)\>水蒸気分子量比
 			\end{tabbing}
 		\end{minipage}\\
 		\rule[0pt]{\textwidth}{\heavyrulewidth}
@@ -89,15 +116,30 @@ Chou and Kouvaris (1991) の方法に基づいて計算する。
 
 \section{実験設定}
 
-実験で用いたモデルパラメータの値を、表 \ref{モデルパラメータ} に示す。
+表 \ref{実験リスト} に示す設定で実験を行った。
 本研究で行う計算の水平分解能は、三角形切断の T42 に対応する、\(128\times64\)
 であり、鉛直座標には \(\sigma\) 座標系を用い、その層数は 26 である。
-
-表 \ref{実験リスト} に示す太陽定数で実験を行った。以後、各実験で与えた太陽定数
-の値に、S を前置したものを実験名とする。
+実験で用いたモデルパラメータの値を、表 \ref{モデルパラメータ} に示す。
 
 初期状態は、どの太陽定数においても、静止・等温 (\(280\hmu{K}\))・比湿は 0 で一様
 とした。
+
+\begin{table}[t]
+	\centering
+	\caption{実験リスト}\label{実験リスト}
+	\begin{tblr}{lccccc}
+		\toprule
+		実験名&太陽定数 \(S\ [\hmu*{W/m^2}]\)&雲時定数 \([\hmu*{s}]\)&
+			積分期間 \([\text{年}]\)&計算結果を示す年度 \([\text{年度}]\)\\
+		\midrule
+		S1366&1366&13500&50&41\\
+		S1500&1500&13500&20&11\\
+		S1600&1600&13500&20&11\\
+		S1800&1800&13500&20&11\\
+		S2000&2000&13500&30&21\\
+		\bottomrule
+	\end{tblr}
+\end{table}
 
 \begin{table}[t]
 	\centering
@@ -120,24 +162,6 @@ Chou and Kouvaris (1991) の方法に基づいて計算する。
 		\bottomrule
 	\end{tblr}
 \end{table}
-
-\begin{table}[t]
-	\centering
-	\caption{実験リスト}\label{実験リスト}
-	\begin{tblr}{lccccc}
-		\toprule
-		実験名&太陽定数 \(S\ [\hmu*{W/m^2}]\)&雲時定数 \([\hmu*{s}]\)&
-			積分期間 \([\text{年}]\)&計算結果を示す年度 \([\text{年度}]\)\\
-		\midrule
-		S1366&1366&13500&50&41\\
-		S1500&1500&13500&20&11\\
-		S1600&1600&13500&20&11\\
-		S1800&1800&13500&20&11\\
-		S2000&2000&13500&30&21\\
-		\bottomrule
-	\end{tblr}
-\end{table}
-
 
 \end{document}
 

@@ -3,4 +3,8 @@
 *.aux
 *.synctex.gz
 *.toc
+*.lot
+*.lof
+*.log
 *.xmpi
+*.bcf

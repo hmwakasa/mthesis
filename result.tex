@@ -7,9 +7,9 @@
 
 \section{計算結果が平衡状態であるか}
 
-各実験での全球平均外向き赤外放射 (OLR) と全球平均入射短波放射 (OSR) の
-全球平均の時系列図を図 \ref{OLR-OSRA} に示す。この図を見ると、 S1366
-から S1800 の太陽定数では、 おおよそ 10 年以上積分をすることで、全球平均
+各実験で得られた、全球平均した外向き赤外放射 (OLR) と入射短波放射 (OSR) の
+時系列図を図 \ref{OLR-OSR} に示す。この図を見ると、実験 S1366
+から S1800 では、おおよそ 10 年以上積分をすることで、全球平均
 OLR と OSR がほぼ一致して、大気の状態が平衡になっていることがわかる。
 一方で、S2000 では、全球平均 OLR が激しく変動していて、この図からは平衡
 状態に達しているかは判断できない。
@@ -20,36 +20,43 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 ため、雲によって短波放射が地表面に全ては到達しないからであると考えられる。
 
 次に、各実験での OLR の東西平均を図 \ref{OLR東西平均} に、地表面温度の
-東西平均を図 \ref{地表面温度} に示す。この図を見ると、灰色大気・雲なしの
-モデルで Ishiwatari \etal (2002) が結論したように、非灰色大気・雲ありの
-モデルでも、太陽定数が増大したときに、OLR の南北分布が一様になることが見て取れる。
+東西平均を図 \ref{地表面温度} に示す。この図を見ると、地表面温度も
+OLR も、太陽定数が増大するにつれて、南北の差が小さくなることが見て取れる。
+ここから、非灰色大気・雲ありのモデルでも、
+灰色大気・雲なしのモデルで Ishiwatari \etal (2002) が結論したように、
+モデルでも、太陽定数の増大に伴って、南北に一様になるということが言えよう。
+ところで、実験 S2000 では OLR の東西平均が他の太陽定数とは異なっている
+パターンを示しているように見える。前の段落でも述べたように、実験 S2000 は
+平衡状態に達しているか判断できない。
+そのため、実験 S2000 の OLR 東西平均の分布のパターンに関しては、
+積分時間をさらに延長しなければ詳しく議論をすることはできないだろう。
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/S1366_OLRA-OSRA_horimean_time0.0-18250.0-crop.png}
-		\caption{\(S=1366\hmu{W/m^2}\)}
+		\caption{\(S=1366\hmu{W/m^2}\)}\label{S1366_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/S1500_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
-		\caption{\(S=1500\hmu{W/m^2}\)}
+		\caption{\(S=1500\hmu{W/m^2}\)}\label{S1500_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/S1600_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
-		\caption{\(S=1600\hmu{W/m^2}\)}
+		\caption{\(S=1600\hmu{W/m^2}\)}\label{S1600_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/S1800_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
-		\caption{\(S=1800\hmu{W/m^2}\)}
+		\caption{\(S=1800\hmu{W/m^2}\)}\label{S1800_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/S2000_OLRA-OSRA_horimean_time0.0-10950.0-crop.png}
-		\caption{\(S=2000\hmu{W/m^2}\)}
+		\caption{\(S=2000\hmu{W/m^2}\)}\label{S2000_OLRA}
 	\end{subfigure}
 	\caption{各実験での全球平均した OLR（赤線）と OSR（青線）の時系列変化}\label{OLR-OSR}
 \end{figure}
@@ -75,9 +82,11 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\end{minipage}
 \end{figure}
 
+次に、各実験で得られた大気構造がどのようになっているか詳細に見てゆこう。
 各実験で得られた子午面構造を図 \ref{S1366} から \ref{S2000} に示す。
-いずれの実験でも、東西風の子午面分布を確認すると、ジェットが発生して
-いるのがわかる。しかし、S1800 と S2000 ではジェットが大気上端に
+いずれの実験でも、東西風の子午面分布（図 \ref{S1366東西風} から \ref{S2000東西風}）
+を確認すると、ジェットが発生しているのがわかる。
+しかし、S1800 と S2000 ではジェットが大気上端に
 くっついており、モデルの高度が足りていない可能性がある。
 
 \begin{figure}[t]
@@ -85,27 +94,32 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/U,time=14600:14965-crop-rotate.pdf}
-		\caption{東西風}
+		\caption{東西風}\label{S1366東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/V,time=14600:14965-crop-rotate.pdf}
-		\caption{南北風}
+		\caption{南北風}\label{S1366南北風}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{S1366/SigDot,time=14600:14965-crop-rotate.pdf}
+		\caption{鉛直風}\label{S1366鉛直風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/Temp,time=14600:14965-crop-rotate.pdf}
-		\caption{気温分布}
+		\caption{気温分布}\label{S1366気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/QH2OVap,time=14600:14965-crop-rotate.pdf}
-		\caption{比湿}
+		\caption{比湿}\label{S1366比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1366/Height,time=14600:14965-crop-rotate.pdf}
-		\caption{ジオポテンシャル高度}
+		\caption{ジオポテンシャル高度}\label{S1366ジオポテンシャル高度}
 	\end{subfigure}
 	\caption{
 		\(S=1366\hmu{W/m^2}\) の結果。11 年目の年平均値。
@@ -117,27 +131,32 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/U,time=3650:4015-crop-rotate.pdf}
-		\caption{東西風}
+		\caption{東西風}\label{S1500東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/V,time=3650:4015-crop-rotate.pdf}
-		\caption{南北風}
+		\caption{南北風}\label{S1500南北風}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{S1500/SigDot,time=3650:4015-crop-rotate.pdf}
+		\caption{鉛直風}\label{S1500鉛直風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/Temp,time=3650:4015-crop-rotate.pdf}
-		\caption{気温分布}
+		\caption{気温分布}\label{S1500気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/QH2OVap,time=3650:4015-crop-rotate.pdf}
-		\caption{比湿}
+		\caption{比湿}\label{S1500比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1500/Height,time=3650:4015-crop-rotate.pdf}
-		\caption{ジオポテンシャル高度}
+		\caption{ジオポテンシャル高度}\label{S1500ジオポテンシャル高度}
 	\end{subfigure}
 	\caption{
 		\(S=1500\hmu{W/m^2}\) の結果。11 年目の年平均値。
@@ -149,27 +168,32 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/U,time=3650:4015-crop-rotate.pdf}
-		\caption{東西風}
+		\caption{東西風}\label{S1600東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/V,time=3650:4015-crop-rotate.pdf}
-		\caption{南北風}
+		\caption{南北風}\label{S1600南北風}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{S1600/SigDot,time=3650:4015-crop-rotate.pdf}
+		\caption{鉛直風}\label{S1600鉛直風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/Temp,time=3650:4015-crop-rotate.pdf}
-		\caption{気温分布}
+		\caption{気温分布}\label{S1600気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/QH2OVap,time=3650:4015-crop-rotate.pdf}
-		\caption{比湿}
+		\caption{比湿}\label{S1600比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1600/Height,time=3650:4015-crop-rotate.pdf}
-		\caption{ジオポテンシャル高度}
+		\caption{ジオポテンシャル高度}\label{S1600ジオポテンシャル高度}
 	\end{subfigure}
 	\caption{
 		\(S=1600\hmu{W/m^2}\) の結果。11 年目の年平均値。
@@ -181,27 +205,32 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/U,time=3650:4015-crop-rotate.pdf}
-		\caption{東西風}
+		\caption{東西風}\label{S1800東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/V,time=3650:4015-crop-rotate.pdf}
-		\caption{南北風}
+		\caption{南北風}\label{S1800南北風}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{S1800/SigDot,time=3650:4015-crop-rotate.pdf}
+		\caption{鉛直風}\label{S1800鉛直風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/Temp,time=3650:4015-crop-rotate.pdf}
-		\caption{気温分布}
+		\caption{気温分布}\label{S1800気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/QH2OVap,time=3650:4015-crop-rotate.pdf}
-		\caption{比湿}
+		\caption{比湿}\label{S1800比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S1800/Height,time=3650:4015-crop-rotate.pdf}
-		\caption{ジオポテンシャル高度}
+		\caption{ジオポテンシャル高度}\label{S1800ジオポテンシャル高度}
 	\end{subfigure}
 	\caption{
 		\(S=1800\hmu{W/m^2}\) の結果。11 年目の年平均値。
@@ -213,27 +242,32 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/U,time=7300:7665-crop-rotate.pdf}
-		\caption{東西風}
+		\caption{東西風}\label{S2000東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/V,time=7300:7665-crop-rotate.pdf}
-		\caption{南北風}
+		\caption{南北風}\label{S2000南北風}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{S2000/SigDot,time=7300:7665-crop-rotate.pdf}
+		\caption{鉛直風}\label{S2000鉛直風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/Temp,time=7300:7665-crop-rotate.pdf}
-		\caption{気温分布}
+		\caption{気温分布}\label{S2000気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/QH2OVap,time=7300:7665-crop-rotate.pdf}
-		\caption{比湿}
+		\caption{比湿}\label{S2000比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{S2000/Height,time=7300:7665-crop-rotate.pdf}
-		\caption{ジオポテンシャル高度}
+		\caption{ジオポテンシャル高度}\label{S2000ジオポテンシャル高度}
 	\end{subfigure}
 	\caption{
 		\(S=2000\hmu{W/m^2}\) の結果。31 年目の年平均値。
@@ -249,7 +283,7 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 
 \begin{gather}
 	F_L=\int_{p_s}^0 Lqv\,dp=\int_1^0 Lqvp_s\,d\sigma,\\
-	F_D=\int_{p_s}^0 (c_{pn}T+gh)v\,dp=\int_1^0 (c_{pn}T+gh)vp_s\,d\sigma,\\
+	F_D=\int_{p_s}^0 (c_{pn}T+gz)v\,dp=\int_1^0 (c_{pn}T+gz)vp_s\,d\sigma,\\
 	F_T=F_L+F_D.
 \end{gather}
 
@@ -396,7 +430,7 @@ Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/
 
 \begin{itemize}
 	\item S1800 までは、比湿が大きくなるので潜熱輸送が大きくなる。
-	\item 太陽定数が大きくなると、上空の南北風が小さくなるので \(ghv\) が小さくなり、
+	\item 太陽定数が大きくなると、上空の南北風が小さくなるので \(gzv\) が小さくなり、
 		乾燥静的エネルギーの輸送が小さくなる。
 	\item S2000 は南北風が小さいので南北熱輸送が少ない。
 	\item 地形がないので停滞性擾乱による輸送は小さい。
