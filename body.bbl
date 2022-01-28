@@ -62,8 +62,8 @@
            familyi={I\bibinitperiod},
            given={M.},
            giveni={M\bibinitperiod}}}%
-        {{hash=1bfd76d4b5c88125b96ab92441a0885a}{%
-           family={Takahiro},
+        {{hash=e2412fd5aae6e683add50266d6ec2365}{%
+           family={Takehiro},
            familyi={T\bibinitperiod},
            given={S.},
            giveni={S\bibinitperiod}}}%
@@ -79,11 +79,11 @@
            giveni={Y\bibinithyphendelim Y\bibinitperiod}}}%
       }
       \strng{namehash}{79ac2addc86dc4f309374b4d43aee1c5}
-      \strng{fullhash}{7fb8ae49485d8488bd00515870f13283}
-      \strng{bibnamehash}{7fb8ae49485d8488bd00515870f13283}
-      \strng{authorbibnamehash}{7fb8ae49485d8488bd00515870f13283}
+      \strng{fullhash}{c158257504061abb34738094d6160c86}
+      \strng{bibnamehash}{c158257504061abb34738094d6160c86}
+      \strng{authorbibnamehash}{c158257504061abb34738094d6160c86}
       \strng{authornamehash}{79ac2addc86dc4f309374b4d43aee1c5}
-      \strng{authorfullhash}{7fb8ae49485d8488bd00515870f13283}
+      \strng{authorfullhash}{c158257504061abb34738094d6160c86}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
