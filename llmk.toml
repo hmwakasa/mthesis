@@ -1,3 +1,7 @@
 latex = "lualatex"
 source = "body.tex"
-bibtex = "biber"
+
+[programs.bibtex]
+command="biber"
+target="ref.bib"
+args="body"
