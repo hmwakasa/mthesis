@@ -7,108 +7,74 @@
 
 \section{雲がある場合の全球平均値の太陽定数依存性}
 
-まず最初に、雲がある場合の実験（実験 S1366, S1500, S1600, S1800, S2000）に
-ついて見る。
-雲ありの場合について各実験で得られた、全球平均した外向き赤外放射 (OLR) と入射短波放射 (OSR) の
-時系列図を図 \ref{time} に示す。この図を見ると、実験 S1366 から S1600
-（図 \ref{S1366_OLRA} から \ref{S1600_OLRA}）では、おおよそ 10 年以上積分を
-することで、全球平均の OLR が季節変化しつつも、全球平均 OLR と OSR が
-\(190\hmu{W/m^2}\) 付近でほぼ一致して、大気の状態が平衡になっているよう
-にみえる。実験 S1800（図 \ref{S1800_OLRA}）でも、OLR と OSR が\(200\hmu{W/m^2}\)
-付近の値で一致して、大気の状態が平衡になっているように見える。一方で、S2000
-（図 \ref{S2000_OLRA}）では、全球平均 OLR が激しく変動していて、この図からは
-平衡状態に達しているかは判断できない。
-表 \ref{OLR-OSR-mean} に OLR と OSR の値の年平均値を示した。
-実験 S1366 から S1600 では、OLR と OSR の値の差が \(3.0\hmu{W/m^2}\) 以下
-になっていて、この表からも平衡状態に達しているようにみえる。しかし、
-実験 S1800 では OLR と OSR の差が \(4.6\hmu{W/m^2}\) と他の実験よりも大きく
-なっていて、平衡状態に達していないように見える。また、S2000 では OLR と
-OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すように
-平衡状態になっていない可能性がある。
-
-次に、全球平均地表面温度の時系列図を図 \ref{time} に示す。
-全球平均地表面温度は、実験 S1366 から S1600（図 \ref{S1366_SurfTemp} から
-\ref{S1600_SurfTemp}）では地表面温度がそれぞれ \(286\hmu{K}, 293\hmu{K}, 298\hmu{K}\)
-で一定となり、平衡状態に達しているように見える。しかし、実験 S1800 では
-地表面温度が上昇し続けていて、平衡状態に達していないようにみえる。
-また、実験 S2000 では、地表面温度が \(320\hmu{K}\) で一定になっている
-ように見えるが、後で示すように平衡状態になっておらず、大気の状態が
-正しく計算できていない可能性がある。
-
-%Ishiwatari \etal (2002) では、灰色大気での放射上限は \(1600\hmu{W/m^2}\)
-%であると結論したが、本研究で得られた結果では、\(S=1800\hmu{W/m^2}\) でも
-%平衡状態に達しているように見える。これは、Ishiwatari \etal (2002) の
-%モデルでは雲がなかったのに対して、本研究では雲があるモデルで計算をしている
-%ため、雲によって短波放射が地表面に全ては到達しないからであると考えられる。
-
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/S1366_OLRA-OSRA_horimean_time0.0-18250.0-crop.png}
+		\includegraphics[width=\textwidth]{S1366/S1366_OLRA-OSRA_horimean_time0.0-18250.0-crop.png}
 		\caption{S1366 (OLR, OSR)}\label{S1366_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/S1366_SurfTemp_horimean_time0.0-18250.0-crop.png}
+		\includegraphics[width=\textwidth]{S1366/S1366_SurfTemp_horimean_time0.0-18250.0-crop.png}
 		\caption{S1366（地表面温度）}\label{S1366_SurfTemp}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/S1500_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1500/S1500_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
 		\caption{S1500 (OLR, OSR)}\label{S1500_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/S1500_SurfTemp_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1500/S1500_SurfTemp_horimean_time0.0-7300.0-crop.png}
 		\caption{S1500（地表面温度）}\label{S1500_SurfTemp}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/S1600_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1600/S1600_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
 		\caption{S1600 (OLR, OSR)}\label{S1600_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/S1600_SurfTemp_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1600/S1600_SurfTemp_horimean_time0.0-7300.0-crop.png}
 		\caption{S1600（地表面温度）}\label{S1600_SurfTemp}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/S1800_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1800/S1800_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
 		\caption{S1800 (OLR, OSR)}\label{S1800_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/S1800_SurfTemp_horimean_time0.0-7300.0-crop.png}
+		\includegraphics[width=\textwidth]{S1800/S1800_SurfTemp_horimean_time0.0-7300.0-crop.png}
 		\caption{S1800（地表面温度）}\label{S1800_SurfTemp}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/S2000_OLRA-OSRA_horimean_time0.0-10950.0-crop.png}
+		\includegraphics[width=\textwidth]{S2000/S2000_OLRA-OSRA_horimean_time0.0-10950.0-crop.png}
 		\caption{S2000 (OLR, OSR)}\label{S2000_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/S2000_SurfTemp_horimean_time0.0-10950.0-crop.png}
+		\includegraphics[width=\textwidth]{S2000/S2000_SurfTemp_horimean_time0.0-10950.0-crop.png}
 		\caption{S2000（地表面温度）}\label{S2000_SurfTemp}
 	\end{subfigure}
-	\caption[各実験での全球平均 OLR, OSR, 地表面温度の時系列変化]{
+	\caption[雲あり各実験での全球平均 OLR, OSR, 地表面温度の時系列変化]{
 		(\subref{S1366_OLRA}, \subref{S1500_OLRA}, \subref{S1600_OLRA},
 		\subref{S1800_OLRA}, \subref{S2000_OLRA})
-		各実験での全球平均した OLR（赤線）と OSR（青線）の時系列変化。
+		雲あり各実験での全球平均した OLR（赤線）と OSR（青線）の時系列変化。
 		横軸は時刻で、縦軸は OLR, OSR の値 \hmu*{[W/m^{2}]}。
 		(\subref{S1366_SurfTemp}, \subref{S1500_SurfTemp}, \subref{S1600_SurfTemp},
 		\subref{S1800_SurfTemp}, \subref{S2000_SurfTemp})
-		各実験での全球平均地表面温度の時系列変化。
+		雲あり各実験での全球平均地表面温度の時系列変化。
 		横軸は時刻で、縦軸は全球平均地表面温度 \hmu*{[K]}。
 	}\label{time}
 \end{figure}
 
 \begin{table}[b]
 	\centering
-	\caption[各実験での OLR と OSR の年平均値]{
-		各実験での OLR と OSR の年平均値。
+	\caption[雲あり各実験での OLR と OSR の年平均値]{
+		雲あり各実験での OLR と OSR の年平均値。
 	}\label{OLR-OSR-mean}
 	\begin{tblr}{crrr}
 		\toprule
@@ -123,8 +89,60 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\end{tblr}
 \end{table}
 
-\afterpage{\clearpage}
-次に、各実験での OLR の東西平均を図 \ref{OLRA東西平均} に、地表面温度の
+まず最初に、雲がある場合の実験（実験 S1366, S1500, S1600, S1800, S2000）に
+ついて見る。
+雲ありの場合について各実験で得られた、全球平均した外向き赤外放射 (OLR) と入射短波放射 (OSR) の
+時系列図を図 \ref{time} に示す。この図を見ると、実験 S1366 から S1600
+（図 \ref{S1366_OLRA} から \ref{S1600_OLRA}）では、おおよそ 10 年以上積分を
+することで、全球平均の OLR が季節変化しつつも、全球平均 OLR と OSR が
+\(190\hmu{W/m^2}\) 付近でほぼ一致して、大気の状態が平衡になっているよう
+にみえる。実験 S1800（図 \ref{S1800_OLRA}）でも、OLR と OSR が\(200\hmu{W/m^2}\)
+付近の値で一致して、大気の状態が平衡になっているように見える。一方で、S2000
+（図 \ref{S2000_OLRA}）では、全球平均 OLR が激しく変動している。
+表 \ref{OLR-OSR-mean} に OLR と OSR の値の年平均値を示した。
+実験 S1366 から S1600 では、OLR と OSR の値の差が \(3.0\hmu{W/m^2}\) 以下
+になっていて、この表からも平衡状態に達しているようにみえる。しかし、
+実験 S1800 では OLR と OSR の差が \(4.6\hmu{W/m^2}\) と他の実験よりも大きく
+なっている。また、S2000 では OLR と OSR の差は \(2.0\hmu{W/m^2}\) と大きくはない。
+
+次に、全球平均地表面温度の時系列図を図 \ref{time} に示す。
+全球平均地表面温度は、実験 S1366 から S1600（図 \ref{S1366_SurfTemp} から
+\ref{S1600_SurfTemp}）では地表面温度がそれぞれ \(286\hmu{K}, 293\hmu{K}, 298\hmu{K}\)
+で一定となり、平衡状態に達しているように見える。しかし、実験 S1800 では
+地表面温度が上昇し続けていて、平衡状態に達していないようにみえる。
+また、実験 S2000 では、地表面温度が \(320\hmu{K}\) で一定になっている
+ように見える。
+
+以上のことから、実験 S1366, S1500, S1600 は平衡状態に達しているが、
+実験 S1800 は全球平均 OLR と OSR に差があり、地表面温度が上昇し続けていて
+平衡状態に達していない。また、実験 S2000 に関しては、全球平均値を見ただけでは
+判断できないが、これから示すように平衡状態になっておらず、大気の状態を
+正しく表現できていない可能性がある。
+
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{OLR-overplot-crop-rotate.pdf}
+		\caption{OLR の東西平均}\label{OLRA東西平均}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{SurfTemp-overplot-crop-rotate.pdf}
+		\caption{地表面温度の東西平均}\label{地表面温度}
+	\end{subfigure}
+	\caption[雲あり各実験での OLR と地表面温度の東西平均]{
+		雲あり各実験での OLR と地表面温度の東西平均の南北分布。
+		それぞれ年平均した値で、
+		黒線: S1366; 緑線: S1500; 青線: S1600; 黄線: S1800; 桃線: S2000 の結果である。
+		横軸は緯度で、縦軸はそれぞれ (\subref{OLRA東西平均}) OLR の東西平均 \hmu*{[W/m^2]}と、
+		(\subref{地表面温度}) 地表面温度の東西平均 \hmu*{[K]} である。
+	}
+\end{figure}
+
+次に、雲あり各実験での OLR の東西平均を図 \ref{OLRA東西平均} に、地表面温度の
 東西平均を図 \ref{地表面温度} に示す。
 図 \ref{OLRA東西平均} を見ると、実験 S1366 から S1800 までは、OLR の
 東西平均の南北分布に特徴的なパターンがあるのが見える。低緯度では OLR の値が
@@ -162,34 +180,12 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 そのため、実験 S1800, S2000 に関しては、
 積分時間をさらに延長しなければ詳しく議論をすることはできないだろう。
 
-\begin{figure}[t]
-	\centering
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{OLR-overplot-crop-rotate.pdf}
-		\caption{OLR の東西平均}\label{OLRA東西平均}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{SurfTemp-overplot-crop-rotate.pdf}
-		\caption{地表面温度の東西平均}\label{地表面温度}
-	\end{subfigure}
-	\caption[各実験での OLR と地表面温度の東西平均]{
-		各実験での OLR と地表面温度の東西平均の南北分布。
-		それぞれ年平均した値で、
-		黒線: S1366; 緑線: S1500; 青線: S1600; 黄線: S1800; 桃線: S2000 の結果である。
-		横軸は緯度で、縦軸はそれぞれ (\subref{OLRA東西平均}) OLR の東西平均 \hmu*{[W/m^2]}と、
-		(\subref{地表面温度}) 地表面温度の東西平均 \hmu*{[K]} である。
-	}
-\end{figure}
-
 \afterpage{\clearpage}
 
 \section{雲がある場合の大気構造の太陽定数依存性}
 
-次に、各実験で得られた大気構造がどのようになっているか詳細に見てゆこう。
-各実験で得られた子午面構造を図 \ref{S1366} から \ref{S2000} に示す。
+次に、雲あり各実験で得られた大気構造がどのようになっているか詳細に見てゆこう。
+雲あり各実験で得られた子午面構造を図 \ref{S1366} から \ref{S2000} に示す。
 東西風の子午面分布（図 \ref{S1366東西風} から \ref{S2000東西風}）を見ると、
 いずれも南北で対称な分布となっていて、
 実験 S1366（図 \ref{S1366東西風}）では緯度 30\textdegree 、\(\sigma=0.1\) に \(60\hmu{m/s}\) の、
@@ -225,11 +221,16 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 「高緯度向きの南北風」「低緯度向きの南北風」が低緯度から順に現れていることが
 読み取れる。
 質量流線関数をみると、いずれの実験でも南北対称な分布となっていて、
-実験 S1366（図 \ref{S1366質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、緯度 45\textdegree で上昇流が、
-実験 S1500（図 \ref{S1500質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、緯度 50\textdegree で上昇流が、
-実験 S1600（図 \ref{S1600質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、緯度 55\textdegree で上昇流が、
-実験 S1800（図 \ref{S1800質量流線関数}）では赤道で上昇流、緯度 35\textdegree で下降流、緯度 70\textdegree で上昇流が、
-実験 S2000（図 \ref{S2000質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、緯度 60\textdegree で上昇流が
+実験 S1366（図 \ref{S1366質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、
+緯度 45\textdegree で上昇流が、
+実験 S1500（図 \ref{S1500質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、
+緯度 50\textdegree で上昇流が、
+実験 S1600（図 \ref{S1600質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、
+緯度 55\textdegree で上昇流が、
+実験 S1800（図 \ref{S1800質量流線関数}）では赤道で上昇流、緯度 35\textdegree で下降流、
+緯度 70\textdegree で上昇流が、
+実験 S2000（図 \ref{S2000質量流線関数}）では赤道で上昇流、緯度 30\textdegree で下降流、
+緯度 60\textdegree で上昇流が
 現れている。そして、太陽定数が大きくなるにつれて、質量流線関数の等値線の
 間隔が広くなり、循環が弱くなっているのがわかる。
 実験 S1366 から S1600 で現れるこのパターンは、ハドレー循環・フェレル循環・極循環に対応
@@ -244,36 +245,39 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 太陽定数が大きくなるにつれて大きくなり、南北の差が小さくなってゆく
 ことがわかる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/U,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/U,time=14600:14965-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1366東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/V,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/V,time=14600:14965-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1366南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MSF,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth,]{S1366/MSF,time=14600:14965-crop-rotate.pdf}
+		\\\vspace{13pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1366質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/Temp,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Temp,time=14600:14965-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1366気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/QH2OVap,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/QH2OVap,time=14600:14965-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1366比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/Height,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Height,time=14600:14965-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m/s]}}\label{S1366ジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1366 の各物理量の子午面分布]{
@@ -292,32 +296,33 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/U,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/U,time=3650:4015-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1500東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/V,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/V,time=3650:4015-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1500南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MSF,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MSF,time=3650:4015-crop-rotate.pdf}
+		\\\vspace{13pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1500質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Temp,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Temp,time=3650:4015-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1500気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/QH2OVap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/QH2OVap,time=3650:4015-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1500比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Height,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Height,time=3650:4015-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m]}}\label{S1500ジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1500 の各物理量の子午面分布]{
@@ -330,32 +335,33 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/U,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/U,time=3650:4015-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1600東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/V,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/V,time=3650:4015-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1600南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MSF,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MSF,time=3650:4015-crop-rotate.pdf}
+		\\\vspace{13pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1600質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Temp,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Temp,time=3650:4015-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1600気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/QH2OVap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/QH2OVap,time=3650:4015-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1600比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Height,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Height,time=3650:4015-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m]}}\label{S1600ジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1600 の各物理量の子午面分布]{
@@ -368,32 +374,33 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/U,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/U,time=3650:4015-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1800東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/V,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/V,time=3650:4015-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1800南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MSF,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MSF,time=3650:4015-crop-rotate.pdf}
+		\\\vspace{13pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1800質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Temp,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Temp,time=3650:4015-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1800気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/QH2OVap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/QH2OVap,time=3650:4015-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1800比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Height,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Height,time=3650:4015-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m]}}\label{S1800ジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1800 の各物理量の子午面分布]{
@@ -406,32 +413,33 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/U,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/U,time=7300:7665-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S2000東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/V,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/V,time=7300:7665-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S2000南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MSF,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MSF,time=7300:7665-crop-rotate.pdf}
+		\\\vspace{13pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S2000質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Temp,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Temp,time=7300:7665-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S2000気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/QH2OVap,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/QH2OVap,time=7300:7665-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S2000比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Height,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Height,time=7300:7665-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m]}}\label{S2000ジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S2000 の各物理量の子午面分布]{
@@ -444,8 +452,8 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 
 \section{雲がある場合の南北熱輸送の太陽定数依存性}
 
-ここまで、各実験でどのような子午面構造が現れているかをみてきた。
-次からは、各実験で、どのような南北熱輸送が起きているかを示す。
+ここまで、雲あり各実験でどのような子午面構造が現れているかをみてきた。
+次からは、雲あり各実験で、どのような南北熱輸送が起きているかを示す。
 南北熱輸送を \(F_T=F_D+F_L\) と書く。
 ここで、\(F_L\) は潜熱による南北熱輸送で、
 \(F_D\) は乾燥静的エネルギーによる熱輸送である。
@@ -454,15 +462,15 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 \begin{gather}
 	F_T=F_L+F_D,\\
 	\begin{split}
-		F_L&=\overline{\qty(\int^{z_\text{top}}_0\int^{2\pi}_0 \rho Lqv\,2a\cos\phi\,d\phi\,dz)}\\
-		&=\int^{p_s}_0\int^{2\pi}_0 \overline{\rho Lqv\,2a\cos\phi}\,d\phi\frac{dp}{g}\\
-		&=\int^1_0\int^{2\pi}_0 \overline{\qty(\frac{Lqv}{g}p_s)}\,2a\cos\phi\,d\phi\,d\sigma\\
+		F_L&=\overline{\qty[\int^{z_\text{top}}_0 \rho Lqv\,dz]}\\
+		&=\overline{\qty[\int^{p_s}_0 \rho Lqv\frac{dp}{g}]}\\
+		&=\overline{\qty[\int^1_0 \qty(\frac{Lqv}{g}p_s)\,d\sigma]}\\
 		&=\int^1_0 \qty[\overline{Lqv\frac{p_s}{g}}]d\sigma,
 	\end{split}\\
 	\begin{split}
-		F_L&=\overline{\qty(\int^{z_\text{top}}_0\int^{2\pi}_0 \rho (c_{pn}T+gz)v\,2a\cos\phi\,d\phi\,dz)}\\
-		&=\int^{p_s}_0\int^{2\pi}_0 \overline{\rho (c_{pn}T+gz)v\,2a\cos\phi}\,d\phi\frac{dp}{g}\\
-		&=\int^1_0\int^{2\pi}_0 \overline{\qty(\frac{(c_{pn}T+gz)v}{g}p_s)}\,2a\cos\phi\,d\phi\,d\sigma\\
+		F_D&=\overline{\qty[\int^{z_\text{top}}_0 \rho (c_{pn}T+gz)v\,dz]}\\
+		&=\overline{\qty[\int^{p_s}_0 \rho (c_{pn}T+gz)v\frac{dp}{g}]}\\
+		&=\overline{\qty[\int^1_0 \qty(\frac{(c_{pn}T+gz)v}{g}p_s)\,d\sigma]}\\
 		&=\int^1_0 \qty[\overline{(c_{pn}T+gz)v\frac{p_s}{g}}]d\sigma,
 	\end{split}
 \end{gather}
@@ -472,38 +480,40 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/EngyFlx,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/EngyFlx,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{EnFlxS1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/EngyFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/EngyFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{EnFlxS1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/EngyFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/EngyFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{EnFlxS1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/EngyFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/EngyFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{EnFlxS1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/EngyFlx,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/EngyFlx,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{EnFlxS2000}
 	\end{subfigure}
-	\caption[各実験での南北熱輸送量]{
-		各実験での時間平均・東西平均された南北熱輸送量。
+	\caption[雲あり各実験での南北熱輸送量]{
+		雲あり各実験での時間平均・東西平均された南北熱輸送量。
 		緑線が潜熱輸送、黒線が乾燥静的エネルギーの輸送、青線が全熱輸送量。
 		横軸は緯度であり、縦軸は北向きの輸送量で、単位は \hmu*{PW}。
 		\(0.25\) 日間隔で時間平均をとった。
 	}\label{EnFlx}
 \end{figure}
 
-図 \ref{EnFlx} に各実験での南北熱輸送量（\(F_T, F_L, F_D\) の緯度分布）を示した。
+\afterpage{\clearpage}
+
+図 \ref{EnFlx} に雲あり各実験での南北熱輸送量を示した。
 まず最初に全熱輸送量（各図の青線）に関して見る。全熱輸送量は赤道に関して対称で、
 中緯度にピークがある事がわかる。
 北半球の全熱輸送を見ると、
@@ -524,7 +534,7 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 熱輸送量の合計を見たので、次は潜熱輸送と乾燥静的エネルギー輸送に分けて見る。
 潜熱輸送は、低緯度で低緯度向きの、中緯度で高緯度向きのピークがある（図 \ref{EnFlx}）
 が、実験 S2000 はパターンが違うようにみえる。
-低緯度での輸送量のピークの値は、
+低緯度での低緯度向きの輸送量のピークの値は、
 実験 S1366（図 \ref{EnFlxS1366}）では北緯 10\textdegree で \(3.0\hmu{PW}\)、
 実験 S1500（図 \ref{EnFlxS1500}）では北緯 10\textdegree で \(3.0\hmu{PW}\)、
 実験 S1600（図 \ref{EnFlxS1600}）では北緯 10\textdegree で \(2.5\hmu{PW}\)、
@@ -533,7 +543,7 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 となっといて、太陽定数が増大するに従って高緯度側に移動し減少している。
 実験 S1800 までは同じパターンを有しており、太陽定数が増大するにつれて、
 潜熱輸送のピークの緯度が高緯度に移動する。
-中緯度での輸送量のピークの値は、
+中緯度での高緯度向きの輸送量のピークの値は、
 実験 S1366（図 \ref{EnFlxS1366}）では北緯 30\textdegree で \(3.5\hmu{PW}\)、
 実験 S1500（図 \ref{EnFlxS1500}）では北緯 35\textdegree で \(4.5\hmu{PW}\)、
 実験 S1600（図 \ref{EnFlxS1600}）では北緯 35\textdegree で \(4.5\hmu{PW}\)、
@@ -582,20 +592,38 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 %上空で大きくなるので、ハドレー循環による上空での高緯度向きへの輸送と、
 %フェレル循環による上空での低緯度向きへの輸送に対応している。
 
-北緯 10\textdegree の熱輸送の値は
-実験 S1366 で乾燥静的エネルギーの輸送が \(4.6\hmu{PW}\)、潜熱輸送が \(-2.6\hmu{PW}\)、全熱輸送量が \(2.0\hmu{PW}\)、
-実験 S1500 で乾燥静的エネルギーの輸送が \(4.9\hmu{PW}\)、潜熱輸送が \(-2.7\hmu{PW}\)、全熱輸送量が \(2.2\hmu{PW}\)、
-実験 S1600 で乾燥静的エネルギーの輸送が \(3.9\hmu{PW}\)、潜熱輸送が \(-1.8\hmu{PW}\)、全熱輸送量が \(2.1\hmu{PW}\)、
-実験 S1800 で乾燥静的エネルギーの輸送が \(1.9\hmu{PW}\)、潜熱輸送が \(-0.6\hmu{PW}\)、全熱輸送量が \(1.3\hmu{PW}\)、
-実験 S2000 で乾燥静的エネルギーの輸送が \(1.1\hmu{PW}\)、潜熱輸送が \(-0.3\hmu{PW}\)、全熱輸送量が \(0.8\hmu{PW}\)、
-となっている。
+\afterpage{\clearpage}
 
-ここまで、南北熱輸送の太陽定数依存性を見てきた。
-乾燥静的エネルギーの輸送は実験 S1500 から実験 S1800 まで減少している一方で、
-潜熱の輸送は実験 S1366 から実験 S1800 まで増大して、
-全南北熱輸送量は実験 S1366 から実験 S1800 まで増大している。
-（ピーク値の差が広がっている、ピークでない緯度以外（低緯度）で何が起きているか）
-したがって、南北熱輸送には、潜熱の輸送が効いているといえる。
+\begin{table}[t]
+	\centering
+	\caption[雲あり各実験での低緯度と中緯度での熱輸送の値]{
+		雲あり各実験での 10\textdegree （ハドレー循環域）と 30\textdegree （フェレル循環域）
+		での乾燥静的エネルギー (DSE) 輸送と潜熱輸送の値。
+	}\label{熱輸送表}
+	\begin{tblr}{lrrrr}
+		\toprule
+		実験&北緯&DSE 輸送\hmu{[PW]}&潜熱輸送\hmu{[PW]}&全熱輸送\hmu{[PW]}\\
+		\midrule
+		S1366&10\textdegree&\(4.6\)&\(-2.6\)&\(2.0\)\\
+		S1500&10\textdegree&\(4.9\)&\(-2.7\)&\(2.2\)\\
+		S1600&10\textdegree&\(3.9\)&\(-1.8\)&\(2.1\)\\
+		S1800&10\textdegree&\(1.9\)&\(-0.6\)&\(1.3\)\\
+		S2000&10\textdegree&\(1.1\)&\(-0.3\)&\(0.8\)\\
+		\midrule
+		S1366&30\textdegree&\(0.6\)&\(3.2\)&\(3.8\)\\
+		S1500&30\textdegree&\(0.9\)&\(3.1\)&\(4.0\)\\
+		S1600&30\textdegree&\(0.7\)&\(3.4\)&\(4.1\)\\
+		S1800&30\textdegree&\(1.2\)&\(3.5\)&\(4.7\)\\
+		S2000&30\textdegree&\(0.0\)&\(2.3\)&\(2.3\)\\
+		\bottomrule
+	\end{tblr}
+\end{table}
+表 \ref{熱輸送表} に、ハドレー循環域である低緯度と、フェレル循環域である
+中緯度での熱輸送を示した。この表を見ると、実験 S1500 までは太陽定数が
+大きくなるとハドレー循環域でもフェレル循環域でも熱輸送が大きくなるが、
+実験 S1600 まで太陽定数が大きくなると、ハドレー循環域では熱輸送が減り、
+フェレル循環域では潜熱輸送が増えるのがわかる。したがって、太陽定数が
+大きくなると、傾圧不安定による熱輸送が大きくなるといえる。
 
 \afterpage{\clearpage}
 
@@ -634,31 +662,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTrans@latentEn,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTrans@latentEn,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{潜熱S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{潜熱S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{潜熱S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{潜熱S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTrans@latentEn,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTrans@latentEn,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{潜熱S2000}
 	\end{subfigure}
-	\caption[各実験での潜熱輸送の内訳]{
-		各実験での潜熱輸送。青線が全輸送量 \([\overline{Lqv}]\)、
+	\caption[雲あり各実験での潜熱輸送の内訳]{
+		雲あり各実験での潜熱輸送。青線が全輸送量 \([\overline{Lqv}]\)、
 		黄線が平均子午面循環による輸送量 \([\overline{Lq}][\overline{v}]\)、
 		桃線が停滞性擾乱による輸送量 \([\overline{(Lq)^*}\bar v^*]\)、
 		緑線が移動性擾乱による輸送量 \([\overline{(Lq)'v'}]\)。
@@ -667,42 +695,42 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 \end{figure}
 
 図 \ref{潜熱} に潜熱輸送の内訳を示す。
-どの実験でも、停滞性擾乱による輸送がほとんど存在していない。
-これは、モデルに地形が含まれていないため、停滞性擾乱がほとんど発生しないからである。
 平均子午面循環による潜熱輸送は実験 S1500 で最大になり、それより太陽定数が大きくなると
 小さくなる。
 移動性擾乱による潜熱輸送は、太陽定数が大きくなると大きくなるが、
 実験 S2000 では小さくなる。
+停滞性擾乱による輸送はどの実験でもほとんど存在していない。
+これは、モデルに地形が含まれていないため、停滞性擾乱がほとんど発生しないからである。
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTrans@dryStatEn,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTrans@dryStatEn,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{乾燥静的エネルギーS1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{乾燥静的エネルギーS1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{乾燥静的エネルギーS1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{乾燥静的エネルギーS1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTrans@dryStatEn,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTrans@dryStatEn,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{乾燥静的エネルギーS2000}
 	\end{subfigure}
-	\caption[各実験での乾燥静的エネルギー輸送の内訳]{
-		各実験での潜熱輸送。青線が全輸送量 \([\overline{(c_{pn}T+gz)v}]\)、
+	\caption[雲あり各実験での乾燥静的エネルギー輸送の内訳]{
+		雲あり各実験での潜熱輸送。青線が全輸送量 \([\overline{(c_{pn}T+gz)v}]\)、
 		黄線が平均子午面循環による輸送量 \([\overline{c_{pn}T+gz}][\overline{v}]\)、
 		桃線が停滞性擾乱による輸送量 \([\overline{(c_{pn}T+gz)^*}\bar v^*]\)、
 		緑線が移動性擾乱による輸送量 \([\overline{(c_{pn}T+gz)'v'}]\)。
@@ -711,76 +739,44 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 \end{figure}
 
 図 \ref{乾燥静的エネルギー} に乾燥静的エネルギーの輸送の内訳を示した。
-こちらの場合でも、モデルに地形が含まれていないため、
-停滞性擾乱による輸送はほとんど存在していない。
 潜熱輸送の内訳（図 \ref{潜熱}）に関して見ると、どの実験でも太陽定数が増大するにつれて、
 移動性擾乱が大きくなっていることがわかる。
 平均子午面循環による乾燥静的エネルギー輸送は実験 S1500 で最大になり、
 太陽定数が増大するにつれて減少している。
 移動性擾乱による乾燥静的エネルギー輸送は太陽定数が増大するにつれて減少する。
+こちらの場合でも、モデルに地形が含まれていないため、停滞性擾乱による輸送はほとんど存在していない。
+
+\afterpage{\clearpage}
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/CpT+gz,time=14600:14965-crop-rotate.pdf}
-		\caption{S1366}\label{CpT+gzS1366}
-	\end{subfigure}
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1500/CpT+gz,time=3650:4015-crop-rotate.pdf}
-		\caption{S1500}\label{CpT+gzS1500}
-	\end{subfigure}
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1600/CpT+gz,time=3650:4015-crop-rotate.pdf}
-		\caption{S1600}\label{CpT+gzS1600}
-	\end{subfigure}
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1800/CpT+gz,time=3650:4015-crop-rotate.pdf}
-		\caption{S1800}\label{CpT+gzS1800}
-	\end{subfigure}
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S2000/CpT+gz,time=7300:7665-crop-rotate.pdf}
-		\caption{S2000}\label{CpT+gzS2000}
-	\end{subfigure}
-	\caption[各実験での乾燥静的エネルギーの子午面分布]{
-		各実験での乾燥静的エネルギー \([\overline{c_{pn}T+gz}]\)の子午面分布。
-		等値線間隔は全て \(25\hmu{KJ}\) である。
-	}\label{Cp+gz}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1366/Lq,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Lq,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{LqS1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Lq,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Lq,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{LqS1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Lq,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Lq,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{LqS1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Lq,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Lq,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{LqS1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Lq,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Lq,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{LqS2000}
 	\end{subfigure}
-	\caption[各実験での潜熱の子午面分布]{
-		各実験での潜熱 \([\overline{Lq}]\) の子午面分布。
+	\caption[雲あり各実験での潜熱の子午面分布]{
+		雲あり各実験での潜熱 \([\overline{Lq}]\) の子午面分布。
 		等値線間隔は全て \(25\hmu{KJ}\) である。
 	}\label{Lq}
 \end{figure}
@@ -789,31 +785,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@latentEn_M,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@latentEn_M,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{潜熱平均子午面循環S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{潜熱平均子午面循環S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{潜熱平均子午面循環S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{潜熱平均子午面循環S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@latentEn_M,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@latentEn_M,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{潜熱平均子午面循環S2000}
 	\end{subfigure}
-	\caption[各実験での平均子午面循環による潜熱輸送の子午面分布]{
-		各実験での平均子午面循環による潜熱輸送 \([\overline{Lq}][\bar v]\) の子午面分布。
+	\caption[雲あり各実験での平均子午面循環による潜熱輸送の子午面分布]{
+		雲あり各実験での平均子午面循環による潜熱輸送 \([\overline{Lq}][\bar v]\) の子午面分布。
 		等値線間隔は全て \(15\hmu{PW}\) である。
 	}\label{潜熱平均子午面循環}
 \end{figure}
@@ -822,7 +818,9 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 
 図 \ref{潜熱平均子午面循環} に潜熱の平均子午面循環による輸送の子午面分布、
 すなわち \([\overline{Lq}][\bar v]\) の子午面分布を示す。
+また、図 \ref{Lq} に \([\overline{Lq}]\) の子午面分布も示す。
 地表面付近では比湿が大きい（図 \ref{S1366比湿} から \ref{S2000比湿}）ので、
+\([\overline{Lq}]\) の値も大きくなり、
 地表面付近で平均子午面循環に依る潜熱の輸送が大きいことがわかる。
 地表面付近の低緯度で高緯度向きの輸送があり、太陽定数が大きくなると
 その量が大きくなる。
@@ -831,31 +829,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@latentEn_TE,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@latentEn_TE,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{潜熱移動性擾乱S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{潜熱移動性擾乱S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{潜熱移動性擾乱S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{潜熱移動性擾乱S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@latentEn_TE,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@latentEn_TE,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{潜熱移動性擾乱S2000}
 	\end{subfigure}
-	\caption[各実験での移動性擾乱による潜熱輸送の子午面分布]{
-		各実験での移動性擾乱による潜熱輸送 \([\overline{(Lq)'v'}]\) の子午面分布。
+	\caption[雲あり各実験での移動性擾乱による潜熱輸送の子午面分布]{
+		雲あり各実験での移動性擾乱による潜熱輸送 \([\overline{(Lq)'v'}]\) の子午面分布。
 		等値線間隔は全て \(1\hmu{PW}\) である。
 	}\label{潜熱移動性擾乱}
 \end{figure}
@@ -870,31 +868,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@latentEn_SE,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@latentEn_SE,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{潜熱停滞性擾乱S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{潜熱停滞性擾乱S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{潜熱停滞性擾乱S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{潜熱停滞性擾乱S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@latentEn_SE,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@latentEn_SE,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{潜熱停滞性擾乱S2000}
 	\end{subfigure}
-	\caption[各実験でのに停滞性擾乱による潜熱輸送の子午面分布]{
-		各実験での停滞性擾乱による潜熱輸送 \([\overline{(Lq)^*}\bar v^*]\) の子午面分布。
+	\caption[雲あり各実験でのに停滞性擾乱による潜熱輸送の子午面分布]{
+		雲あり各実験での停滞性擾乱による潜熱輸送 \([\overline{(Lq)^*}\bar v^*]\) の子午面分布。
 		等値線間隔は全て \(0.1\hmu{PW}\) である。
 	}\label{潜熱停滞性擾乱}
 \end{figure}
@@ -906,35 +904,70 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 これは、モデルに地形が含まれていないため、停滞性擾乱がほとんど発生していない
 ことが理由だと考えられる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@dryStatEn_M,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/CpT+gz,time=14600:14965-crop-rotate.pdf}
+		\caption{S1366}\label{CpT+gzS1366}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1500/CpT+gz,time=3650:4015-crop-rotate.pdf}
+		\caption{S1500}\label{CpT+gzS1500}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1600/CpT+gz,time=3650:4015-crop-rotate.pdf}
+		\caption{S1600}\label{CpT+gzS1600}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1800/CpT+gz,time=3650:4015-crop-rotate.pdf}
+		\caption{S1800}\label{CpT+gzS1800}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S2000/CpT+gz,time=7300:7665-crop-rotate.pdf}
+		\caption{S2000}\label{CpT+gzS2000}
+	\end{subfigure}
+	\caption[雲あり各実験での乾燥静的エネルギーの子午面分布]{
+		雲あり各実験での乾燥静的エネルギー \([\overline{c_{pn}T+gz}]\)の子午面分布。
+		等値線間隔は全て \(25\hmu{KJ}\) である。
+	}\label{Cp+gz}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@dryStatEn_M,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{乾燥静的エネルギー平均子午面循環S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{乾燥静的エネルギー平均子午面循環S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{乾燥静的エネルギー平均子午面循環S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{乾燥静的エネルギー平均子午面循環S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@dryStatEn_M,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@dryStatEn_M,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{乾燥静的エネルギー平均子午面循環S2000}
 	\end{subfigure}
-	\caption[各実験での平均子午面循環による乾燥静的エネルギー輸送の子午面分布]{
-		各実験での平均子午面循環による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)}][\bar v]\) の子午面分布。
+	\caption[雲あり各実験での平均子午面循環による乾燥静的エネルギー輸送の子午面分布]{
+		雲あり各実験での平均子午面循環による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)}][\bar v]\) の子午面分布。
 		等値線間隔は全て \(60\hmu{PW}\) である。
 	}\label{乾燥静的エネルギー平均子午面循環}
 \end{figure}
@@ -942,6 +975,7 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 図 \ref{乾燥静的エネルギー平均子午面循環} に乾燥静的エネルギーの
 平均子午面循環による輸送の子午面分布、すなわち 
 \([\overline{(c_{pn}T+gz)}][\bar v]\) の子午面分布を示す。
+また、図 \ref{Cp+gz} に \([\overline{(c_{pn}T+gz)}]\) の子午面分布を示す。
 いずれの実験でも、地表面付近の低緯度で低緯度向きの輸送があり、
 地表面付近の中緯度で高緯度向きの
 輸送がある。また、低緯度の高高度で高緯度向きの輸送がある。
@@ -954,31 +988,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@dryStatEn_TE,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@dryStatEn_TE,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{乾燥静的エネルギー移動性擾乱S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{乾燥静的エネルギー移動性擾乱S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{乾燥静的エネルギー移動性擾乱S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{乾燥静的エネルギー移動性擾乱S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@dryStatEn_TE,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@dryStatEn_TE,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{乾燥静的エネルギー移動性擾乱S2000}
 	\end{subfigure}
-	\caption[各実験での移動性擾乱に依る乾燥静的エネルギー輸送の子午面分布]{
-		各実験での移動性擾乱による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)^*}\bar{v^*}]\) の子午面分布。
+	\caption[雲あり各実験での移動性擾乱に依る乾燥静的エネルギー輸送の子午面分布]{
+		雲あり各実験での移動性擾乱による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)^*}\bar{v^*}]\) の子午面分布。
 		等値線間隔は全て \(1\hmu{PW}\) である。
 	}\label{乾燥静的エネルギー移動性擾乱}
 \end{figure}
@@ -993,31 +1027,31 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/MeriHeatTransTest@dryStatEn_SE,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/MeriHeatTransTest@dryStatEn_SE,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{乾燥静的エネルギー停滞性擾乱S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{乾燥静的エネルギー停滞性擾乱S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{乾燥静的エネルギー停滞性擾乱S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{乾燥静的エネルギー停滞性擾乱S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/MeriHeatTransTest@dryStatEn_SE,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/MeriHeatTransTest@dryStatEn_SE,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{乾燥静的エネルギー停滞性擾乱S2000}
 	\end{subfigure}
-	\caption[各実験でのに停滞性擾乱依る乾燥静的エネルギー輸送の子午面分布]{
-		各実験での停滞性擾乱による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)'v'}]\) の子午面分布。
+	\caption[雲あり各実験でのに停滞性擾乱依る乾燥静的エネルギー輸送の子午面分布]{
+		雲あり各実験での停滞性擾乱による乾燥静的エネルギー輸送 \([\overline{(c_{pn}T+gz)'v'}]\) の子午面分布。
 		等値線間隔は全て \(0.1\hmu{PW}\) である。
 	}\label{乾燥静的エネルギー停滞性擾乱}
 \end{figure}
@@ -1031,35 +1065,37 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 
 \afterpage{\clearpage}
 
+図 \ref{EnFlx南北分布} に熱収支の緯度分布を示す。
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/HeatFlx,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/HeatFlx,time=14600:14965-crop-rotate.pdf}
 		\caption{S1366}\label{EnFlx南北分布S1366}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/HeatFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/HeatFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500}\label{EnFlx南北分布S1500}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/HeatFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/HeatFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1600}\label{EnFlx南北分布S1600}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/HeatFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/HeatFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1800}\label{EnFlx南北分布S1800}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/HeatFlx,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/HeatFlx,time=7300:7665-crop-rotate.pdf}
 		\caption{S2000}\label{EnFlx南北分布S2000}
 	\end{subfigure}
-	\caption[各実験でのエネルギーフラックス南北分布]{
-		各実験でのエネルギーフラックスの南北分布。
+	\caption[雲あり各実験でのエネルギーフラックス南北分布]{
+		雲あり各実験でのエネルギーフラックスの南北分布。
 		横軸は緯度で、縦軸はエネルギーフラックス\hmu*{[W/m^2]}。
 		赤線が OLR、黄線が地表面の正味放射フラックス、
 		青線が凝結加熱率、緑線が蒸発フラックス、水線が顕熱フラックス
@@ -1071,35 +1107,35 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/OLR,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/OLR,time=14600:14965-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1366OLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/SLR,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/SLR,time=14600:14965-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1366SLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/Rain,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Rain,time=14600:14965-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1366降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/Evap,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Evap,time=14600:14965-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1366潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366/Sens,time=14600:14965-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366/Sens,time=14600:14965-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1366顕熱}
 	\end{subfigure}
 	\caption[実験 S1366 のエネルギーフラックスの水平分布]{
 		実験 S1366 でのエネルギーフラックスの水平面分布。等値線間隔はそれぞれ
 		(\subref{S1366OLR}) \(25\hmu{W/m^2}\);
 		(\subref{S1366SLR}) \(10\hmu{W/m^2}\);
-		(\subref{S1366降水}) \(1\hmu{W/m^2}\);
-		(\subref{S1366潜熱}) \(20\hmu{W/m^2}\);
+		(\subref{S1366降水}) \(25\hmu{W/m^2}\);
+		(\subref{S1366潜熱}) \(25\hmu{W/m^2}\);
 		(\subref{S1366顕熱}) \(6\hmu{W/m^2}\)。
 	}\label{S1366_heat}
 \end{figure}
@@ -1108,27 +1144,27 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/OLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/OLR,time=3650:4015-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1500OLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/SLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/SLR,time=3650:4015-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1500SLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Rain,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Rain,time=3650:4015-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1500降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Evap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Evap,time=3650:4015-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1500潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500/Sens,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500/Sens,time=3650:4015-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1500顕熱}
 	\end{subfigure}
 	\caption[実験 S1500 のエネルギーフラックスの水平分布]{
@@ -1141,27 +1177,27 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/OLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/OLR,time=3650:4015-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1600OLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/SLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/SLR,time=3650:4015-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1600SLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Rain,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Rain,time=3650:4015-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1600降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Evap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Evap,time=3650:4015-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1600潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1600/Sens,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1600/Sens,time=3650:4015-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1600顕熱}
 	\end{subfigure}
 	\caption[実験 S1600 のエネルギーフラックスの水平分布]{
@@ -1174,27 +1210,27 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/OLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/OLR,time=3650:4015-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1800OLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/SLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/SLR,time=3650:4015-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1800SLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Rain,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Rain,time=3650:4015-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1800降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Evap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Evap,time=3650:4015-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1800潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1800/Sens,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1800/Sens,time=3650:4015-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1800顕熱}
 	\end{subfigure}
 	\caption[実験 S1800 のエネルギーフラックスの水平分布]{
@@ -1207,27 +1243,27 @@ OSR の差は \(2.0\hmu{W/m^2}\) と大きくはないが、後に示すよう�
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/OLR,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/OLR,time=7300:7665-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S2000OLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/SLR,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/SLR,time=7300:7665-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S2000SLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Rain,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Rain,time=7300:7665-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S2000降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Evap,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Evap,time=7300:7665-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S2000潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S2000/Sens,time=7300:7665-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S2000/Sens,time=7300:7665-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S2000顕熱}
 	\end{subfigure}
 	\caption[実験 S2000 のエネルギーフラックスの水平分布]{
@@ -1257,22 +1293,22 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/S1366nc_OLRA-OSRA_horimean_time0.0-4015.0-crop.png}
+		\includegraphics[width=\textwidth]{S1366-nc/S1366nc_OLRA-OSRA_horimean_time0.0-4015.0-crop.png}
 		\caption{S1366nc (OLR, OSR)}\label{S1366nc_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/S1366nc_SurfTemp_horimean_time0.0-4015.0-crop.png}
+		\includegraphics[width=\textwidth]{S1366-nc/S1366nc_SurfTemp_horimean_time0.0-4015.0-crop.png}
 		\caption{S1366nc（地表面温度）}\label{S1366nc_SurfTemp}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/S1500nc_OLRA-OSRA_horimean_time0.0-4015.0-crop.png}
+		\includegraphics[width=\textwidth]{S1500-nc/S1500nc_OLRA-OSRA_horimean_time0.0-4015.0-crop.png}
 		\caption{S1500nc (OLR, OSR)}\label{S1500nc_OLRA}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/S1500nc_SurfTemp_horimean_time0.0-4015.0-crop.png}
+		\includegraphics[width=\textwidth]{S1500-nc/S1500nc_SurfTemp_horimean_time0.0-4015.0-crop.png}
 		\caption{S1500nc（地表面温度）}\label{S1500nc_SurfTemp}
 	\end{subfigure}
 	\caption[雲なし各実験での全球平均 OLR, OSR, 地表面温度の時系列変化]{
@@ -1350,39 +1386,40 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 雲ありの実験と同様に、ハドレー循環とフェレル循環が発生していることがわかる。
 実験 S1500nc の質量流線関数（図 \ref{S1500nc質量流線関数}）を見ると、
 大気上部で等値線が閉じており、ハドレー循環やフェレル循環が明確に見えない。
-これは、モデルの硬度が足りていないことや、平衡状態に達していないことが
+これは、モデルの高度が足りていないことや、平衡状態に達していないことが
 影響しているかもしれない。
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/U,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/U,time=3650:4015-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1366nc東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/V,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/V,time=3650:4015-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1366nc南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MSF,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MSF,time=3650:4015-crop-rotate.pdf}
+		\\\vspace{24pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1366nc質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Temp,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Temp,time=3650:4015-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1366nc気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/QH2OVap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/QH2OVap,time=3650:4015-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1366nc比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Height,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Height,time=3650:4015-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m/s]}}\label{S1366ncジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1366nc の各物理量の子午面分布]{
@@ -1401,32 +1438,33 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/U,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/U,time=3650:4015-crop-rotate.pdf}
 		\caption{東西風\hmu*{[m/s]}}\label{S1500nc東西風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/V,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/V,time=3650:4015-crop-rotate.pdf}
 		\caption{南北風\hmu*{[m/s]}}\label{S1500nc南北風}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MSF,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MSF,time=3650:4015-crop-rotate.pdf}
+		\\\vspace{24pt}
 		\caption{質量流線関数\hmu*{[kg/s]}}\label{S1500nc質量流線関数}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Temp,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Temp,time=3650:4015-crop-rotate.pdf}
 		\caption{気温\hmu*{[K]}}\label{S1500nc気温分布}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/QH2OVap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/QH2OVap,time=3650:4015-crop-rotate.pdf}
 		\caption{比湿\hmu*{[kg/kg]}}\label{S1500nc比湿}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Height,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Height,time=3650:4015-crop-rotate.pdf}
 		\caption{ジオポテンシャル高度\hmu*{[m/s]}}\label{S1500ncジオポテンシャル高度}
 	\end{subfigure}
 	\caption[実験 S1500nc の各物理量の子午面分布]{
@@ -1449,12 +1487,12 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/EngyFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/EngyFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{EnFlxS1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/EngyFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/EngyFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{EnFlxS1500nc}
 	\end{subfigure}
 	\caption[各実験での南北熱輸送量]{
@@ -1469,12 +1507,12 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{潜熱S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTrans@latentEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{潜熱S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での南北熱輸送量]{
@@ -1493,12 +1531,12 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{乾燥静的エネルギーS1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTrans@dryStatEn,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{乾燥静的エネルギーS1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での乾燥静的エネルギー輸送の内訳]{
@@ -1514,34 +1552,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 実験 S1366nc, S1500nc 両方とも平均子午面循環による輸送が多くを
 占めていることがわかる。
 
-\begin{figure}[t]
-	\centering
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/CpT+gz,time=3650:4015-crop-rotate.pdf}
-		\caption{S1366nc}\label{CpT+gzS1366nc}
-	\end{subfigure}
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/CpT+gz,time=3650:4015-crop-rotate.pdf}
-		\caption{S1500nc}\label{CpT+gzS1500nc}
-	\end{subfigure}
-	\caption[雲なし各実験での乾燥静的エネルギーの子午面分布]{
-		雲なし各実験での乾燥静的エネルギー \([\overline{c_{pn}T+gz}]\)の子午面分布。
-		等値線間隔は全て \(25\hmu{KJ}\) である。
-	}\label{Cp+gznc}
-\end{figure}
+\afterpage{\clearpage}
 
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Lq,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Lq,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{LqS1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Lq,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Lq,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{LqS1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での潜熱の子午面分布]{
@@ -1555,16 +1577,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 地表面付近では比湿が大きい（図 \ref{S1366nc比湿}）ので、
 地表面付近で平均子午面循環に依る潜熱の輸送が大きいことがわかる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{潜熱平均子午面循環S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@latentEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{潜熱平均子午面循環S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での平均子午面循環による潜熱輸送の子午面分布]{
@@ -1579,16 +1603,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 輸送が大きくなっている箇所では、傾圧不安定によって熱が輸送されている
 と考えられる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{潜熱移動性擾乱S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@latentEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{潜熱移動性擾乱S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での移動性擾乱による潜熱輸送の子午面分布]{
@@ -1603,16 +1629,36 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 雲ありの場合と同じく、モデルに地形が含まれていないため、
 停滞性擾乱がほとんど発生していないことがわかる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/CpT+gz,time=3650:4015-crop-rotate.pdf}
+		\caption{S1366nc}\label{CpT+gzS1366nc}
+	\end{subfigure}
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1500-nc/CpT+gz,time=3650:4015-crop-rotate.pdf}
+		\caption{S1500nc}\label{CpT+gzS1500nc}
+	\end{subfigure}
+	\caption[雲なし各実験での乾燥静的エネルギーの子午面分布]{
+		雲なし各実験での乾燥静的エネルギー \([\overline{c_{pn}T+gz}]\)の子午面分布。
+		等値線間隔は全て \(25\hmu{KJ}\) である。
+	}\label{Cp+gznc}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{潜熱停滞性擾乱S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@latentEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{潜熱停滞性擾乱S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験でのに停滞性擾乱による潜熱輸送の子午面分布]{
@@ -1628,16 +1674,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 地表面付近の中緯度で高緯度向きの
 輸送がある。また、低緯度の高高度で高緯度向きの輸送がある。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{乾燥静的エネルギー平均子午面循環S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_M,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{乾燥静的エネルギー平均子午面循環S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での平均子午面循環による乾燥静的エネルギー輸送の子午面分布]{
@@ -1651,16 +1699,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 乾燥静的エネルギーの移動性擾乱による輸送は、雲のない実験でははっきりとした
 パターンが現れないことがわかる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{乾燥静的エネルギー移動性擾乱S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_TE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{乾燥静的エネルギー移動性擾乱S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験での移動性擾乱に依る乾燥静的エネルギー輸送の子午面分布]{
@@ -1676,16 +1726,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 これは、モデルに地形が含まれていないため、停滞性擾乱がほとんど発生していない
 ことが理由だと考えられる。
 
+\afterpage{\clearpage}
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{乾燥静的エネルギー停滞性擾乱S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/MeriHeatTransTest@dryStatEn_SE,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{乾燥静的エネルギー停滞性擾乱S1500nc}
 	\end{subfigure}
 	\caption[各実験でのに停滞性擾乱依る乾燥静的エネルギー輸送の子午面分布]{
@@ -1694,16 +1746,18 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	}\label{乾燥静的エネルギー停滞性擾乱nc}
 \end{figure}
 
+図 \ref{EnFlx南北分布nc} に熱収支の緯度分布を示す。
+
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/HeatFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/HeatFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1366nc}\label{EnFlx南北分布S1366nc}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/HeatFlx,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/HeatFlx,time=3650:4015-crop-rotate.pdf}
 		\caption{S1500nc}\label{EnFlx南北分布S1500nc}
 	\end{subfigure}
 	\caption[雲なし各実験でのエネルギーフラックス南北分布]{
@@ -1719,36 +1773,36 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/OLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/OLR,time=3650:4015-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1366ncOLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/SLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/SLR,time=3650:4015-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1366ncSLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Rain,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Rain,time=3650:4015-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1366nc降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Evap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Evap,time=3650:4015-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1366nc潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1366-nc/Sens,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1366-nc/Sens,time=3650:4015-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1366nc顕熱}
 	\end{subfigure}
 	\caption[実験 S1366nc のエネルギーフラックスの水平分布]{
 		実験 S1366nc のエネルギーフラックスの水平分布。等値線間隔はそれぞれ
-		(\subref{S1366OLR}) \(10\hmu{W/m^2}\);
-		(\subref{S1366SLR}) \(10\hmu{W/m^2}\);
-		(\subref{S1366降水}) \(0.1\hmu{W/m^2}\);
-		(\subref{S1366潜熱}) \(30\hmu{W/m^2}\);
-		(\subref{S1366顕熱}) \(4\hmu{W/m^2}\)。
+		(\subref{S1366OLR}) \(50\hmu{W/m^2}\);
+		(\subref{S1366SLR}) \(12\hmu{W/m^2}\);
+		(\subref{S1366降水}) \(50\hmu{W/m^2}\);
+		(\subref{S1366潜熱}) \(50\hmu{W/m^2}\);
+		(\subref{S1366顕熱}) \(12\hmu{W/m^2}\)。
 	}\label{S1366nc_heat}
 \end{figure}
 
@@ -1756,27 +1810,27 @@ S1500nc では \(13.8\hmu{W/m^2}\) と大きくなっていて、平衡状態に
 	\centering
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/OLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/OLR,time=3650:4015-crop-rotate.pdf}
 		\caption{OLR \hmu*{[W/m^{-2}]}}\label{S1500ncOLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/SLR,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/SLR,time=3650:4015-crop-rotate.pdf}
 		\caption{SLR\hmu*{[W/m^{-2}]}}\label{S1500ncSLR}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Rain,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Rain,time=3650:4015-crop-rotate.pdf}
 		\caption{降水\hmu*{[W/m^{-2}]}}\label{S1500nc降水}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Evap,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Evap,time=3650:4015-crop-rotate.pdf}
 		\caption{潜熱\hmu*{[W/m^{-2}]}}\label{S1500nc潜熱}
 	\end{subfigure}
 	\begin{subfigure}{.4\textwidth}
 		\centering
-		\includegraphics[width=\columnwidth]{S1500-nc/Sens,time=3650:4015-crop-rotate.pdf}
+		\includegraphics[width=\textwidth]{S1500-nc/Sens,time=3650:4015-crop-rotate.pdf}
 		\caption{顕熱\hmu*{[W/m^{-2}]}}\label{S1500nc顕熱}
 	\end{subfigure}
 	\caption[実験 S1500nc のエネルギーフラックスの水平分布]{

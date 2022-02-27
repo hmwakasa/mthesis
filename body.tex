@@ -47,6 +47,11 @@
 \usepackage{multicol}
 \usepackage{subcaption}
 \usepackage{afterpage}
+\usepackage[original]{abstract}
+\renewcommand{\abstractname}{要旨}
+\renewcommand{\absnamepos}{center}
+\renewcommand{\abstractnamefont}{\normalfont\small\bfseries\sffamily}
+\renewcommand{\abstracttextfont}{\normalfont\small}
 
 \usepackage[loadonly,]{enumitem}
 \newlist{desc}{description}{5}
@@ -56,7 +61,7 @@
 
 \usepackage{epmaketitle} %https://github.com/matryo-sika/epmaketitle
 
-\usepackage[style=phys,biblabel=brackets,]{biblatex}
+\usepackage[style=chem-biochem,]{biblatex}
 \addbibresource{ref.bib}
 
 \usepackage{newpxtext}\usepackage{classico}
@@ -173,8 +178,8 @@
 ]
 
 \jlreqsetup{
-	caption_font=\normalsize\normalfont,
-	caption_label_font=\normalsize\sffamily,
+	caption_font=\normalfont\small,
+	caption_label_font=\sffamily\small,
 }
 
 %%%%%%%%%%%%自作マクロ
@@ -219,9 +224,9 @@
 
 \subfile{thanks}
 
-%\appendix
-%
-%%\subfile{appendix}
+\appendix
+
+\subfile{appendix}
 
 \nocite{*}
 \printbibliography[title=参考文献]
