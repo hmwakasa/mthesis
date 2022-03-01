@@ -1,0 +1,153 @@
+open sftp://hmwakasa:@dennou-h.gfd-dennou.org
+cd /GFD_Dennou_Work12/hmwakasa
+
+set xfer:clobber on
+set cmd:verbose on
+
+mget *-overplot.pdf
+!ls -t *-overplot.pdf | head -n2 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n2 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+
+cd S1366
+lcd S1366
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _50y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1500
+lcd S1500
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _20y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1600
+lcd S1600
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _20y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1800
+lcd S1800
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _20y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S2000
+lcd S2000
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _30y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+mget *-overplot-nc.pdf
+!ls -t *-overplot-nc.pdf | head -n2 | xargs -L1 pdfcrop
+!ls -t *-nc-crop.pdf | head -n2 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+
+cd S1366-nc
+lcd S1366-nc
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _11y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1500-nc
+lcd S1500-nc
+mget *.png
+!ls -t *[05].png | head -n2 | sed s/.png//g | xargs -I{} convert {}.png -trim {}-crop.png
+cd _11y/
+mget *.pdf
+!ls -t *[05].pdf | head -n13 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n13 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+close
+
+open sftp://hmwakasa:@nozomi.ep.sci.hokudai.ac.jp
+cd /work03/hmwakasa/dcpam/dcpam-exp2/
+
+cd S1366/50y
+lcd S1366
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1500/20y
+lcd S1500
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1600/20y
+lcd S1600
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1800/20y
+lcd S1800
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S2000/30y
+lcd S2000
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1366nc/11y
+lcd S1366-nc
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+cd S1500nc/11y
+lcd S1500-nc
+mget *.pdf
+!ls -t *[05].pdf | head -n22 | xargs -L1 pdfcrop
+!ls -t *-crop.pdf | head -n22 | sed s/.pdf//g | xargs -I{} pdftk {}.pdf cat 1right output {}-rotate.pdf
+lcd ../
+cd ../../
+
+exit
