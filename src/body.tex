@@ -124,58 +124,60 @@
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 \DeclareMathSymbol\newmoon\mathord{astro}{'316}
 
-%\setmainjfont{FOT-MatissePro-DB}[
-%	AltFont={
-%		{
-%			Range={
-%				"4E00-"9FFF, % CJK 統合漢字
-%				"3400-"4DFF, % CJK 統合漢字拡張 A
-%				"20000-"2EBE0, % CJK 統合漢字拡張 B-F
-%				"2460-"24FF, % 囲み英数字
-%				"3200-"32FF, % 囲み CJK 文字・月
-%				"1F100-"1F2FF % 囲み英数字補助、漢字補助
-%			},
-%			Font=FOT-RodinNTLGPro-DB,
-%		},
-%	},
-%	BoldFeatures={
-%		Font=FOT-MatissePro-EB,
-%		AltFont={
-%			{
-%				Range={
-%					"4E00-"9FFF, % CJK 統合漢字
-%					"3400-"4DFF, % CJK 統合漢字拡張 A
-%					"20000-"2EBE0, % CJK 統合漢字拡張 B-F
-%					"2460-"24FF, % 囲み英数字
-%					"3200-"32FF, % 囲み CJK 文字・月
-%					"1F100-"1F2FF % 囲み英数字補助、漢字補助
-%				},
-%				Font=FOT-RodinNTLGPro-EB,
-%			},
-%		},
-%	},
-%	BoldFeatures={Font=FOT-MatissePro-EB,},
-%	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
-%	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
-%]
-\setmainjfont{FOT-TsukuAOldMinPr6-M}[
+\IfFontExistsTF{FOT-TsukuAOldMinPr6-M}{
+	%\setmainjfont{FOT-MatissePro-DB}[
+	%	AltFont={
+	%		{
+	%			Range={
+	%				"4E00-"9FFF, % CJK 統合漢字
+	%				"3400-"4DFF, % CJK 統合漢字拡張 A
+	%				"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+	%				"2460-"24FF, % 囲み英数字
+	%				"3200-"32FF, % 囲み CJK 文字・月
+	%				"1F100-"1F2FF % 囲み英数字補助、漢字補助
+	%			},
+	%			Font=FOT-RodinNTLGPro-DB,
+	%		},
+	%	},
+	%	BoldFeatures={
+	%		Font=FOT-MatissePro-EB,
+	%		AltFont={
+	%			{
+	%				Range={
+	%					"4E00-"9FFF, % CJK 統合漢字
+	%					"3400-"4DFF, % CJK 統合漢字拡張 A
+	%					"20000-"2EBE0, % CJK 統合漢字拡張 B-F
+	%					"2460-"24FF, % 囲み英数字
+	%					"3200-"32FF, % 囲み CJK 文字・月
+	%					"1F100-"1F2FF % 囲み英数字補助、漢字補助
+	%				},
+	%				Font=FOT-RodinNTLGPro-EB,
+	%			},
+	%		},
+	%	},
+	%	BoldFeatures={Font=FOT-MatissePro-EB,},
+	%	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
+	%	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
+	%]
+	\setmainjfont{FOT-TsukuAOldMinPr6-M}[
 	BoldFeatures={Font=FOT-TsukuAOldMinPr6-E,},
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
 	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
-]
-\setsansjfont{FOT-RodinNTLGPro-DB}[
+	]
+	\setsansjfont{FOT-RodinNTLGPro-DB}[
 	BoldFeatures={Font=FOT-RodinNTLGPro-EB,},
 	YokoFeatures={JFM=jlreq},   % jlreqのJFMを維持する
 	TateFeatures={JFM=jlreqv},  % https://qiita.com/zr_tex8r/items/91ae1dcc9c3afce7fa8c
-]
-\setmonofont{HackGen}[
+	]
+	\setmonofont{HackGen}[
 	Ligatures=TeXReset,
 	Scale=0.89,
-]
-\setmonojfont{HackGen}[
+	]
+	\setmonojfont{HackGen}[
 	Ligatures=TeXReset,
 	Scale=0.89,
-]
+	]
+}{}
 
 \jlreqsetup{
 	caption_font=\normalfont\small,
